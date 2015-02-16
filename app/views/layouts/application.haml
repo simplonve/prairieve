@@ -1,0 +1,13 @@
+!!!
+%html{:lang => 'fr'}
+  %head
+    %meta{:charset => 'utf-8'}
+    %meta{:name => 'viewport', :content => 'width=device-width', 'initial-scale' => '1.0'}
+    / %title= content_for?(:title) ? yield(:title) : t('.title_window')
+    = stylesheet_link_tag 'application'
+    = csrf_meta_tags
+  %body
+    = render "layouts/menu_bar"
+    %main
+      .row 
+        = yield
