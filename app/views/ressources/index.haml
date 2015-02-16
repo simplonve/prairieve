@@ -1,1 +1,5 @@
-%h1 foo
+- @ressouces.each do |ress|
+  %h3= ress.title
+  %p= ress.created_at.strftime("%e %b.")
+  %p= ress.level
+  %hr 
