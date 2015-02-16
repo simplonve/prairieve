@@ -6,8 +6,8 @@ class RessourcesControllerTest < ActionController::TestCase
   end
 
   def login_as_admin
-    usr = ENV['USR']
-    pwd = ENV['PWD']
+    usr = ENV['LOGUSR']
+    pwd = ENV['LOGPWD']
     @request.env['HTTP_AUTHORIZATION'] = ActionController::HttpAuthentication::Basic.encode_credentials(usr, pwd)
   end
 

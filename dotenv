@@ -1,2 +1,2 @@
-USR=foo
-PWD=bar
+LOGUSR=foo
+LOGPWD=bar
