@@ -14,7 +14,7 @@ gem 'factory_girl', :groups => [:test]
 
 gem 'rails-clean-logs'
 
-gem 'foundation-rails'
+# gem 'foundation-rails'
 gem 'font-awesome-sass', '~> 4.2.0'
 gem 'haml'
 
