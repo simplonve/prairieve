@@ -2,7 +2,7 @@ class RessourcesController < ApplicationController
   before_filter :authenticate
 
   def index
-    @ressouces = Ressource.all
+    @chapitres = Chapitre.all
   end
 
   protected

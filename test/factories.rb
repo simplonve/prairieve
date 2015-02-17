@@ -6,6 +6,12 @@ FactoryGirl.define do
     level "green"
     time 10
   end
+
+  factory :chapitre do
+    title "foo"
+    intro "bar"
+    ressources {|ressources| [ressources.association(:ressource)]}
+  end
 end
 
 

@@ -1,5 +1,4 @@
-- @ressouces.each do |ress|
-  %h3= ress.title
-  %p= ress.created_at.strftime("%e %b.")
-  %p= ress.level
+- @chapitres.each do |chap|
+  %h3= chap.title
+  %p= chap.created_at.strftime("%e %b.")
   %hr 
