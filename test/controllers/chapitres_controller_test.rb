@@ -1,6 +1,10 @@
 require 'test_helper'
 
 class ChapitresControllerTest < ActionController::TestCase
+  def setup
+    @chapitre = FactoryGirl.create(:chapitre)
+  end
+  
   def login_as_admin
     # Every ENV['FOO'] should be available in a file called .env at the root of the app
     # Syntax example of the .env file
@@ -24,18 +28,14 @@ class ChapitresControllerTest < ActionController::TestCase
 
   def test_chapitre_has_ressources
     login_as_admin
-    chapitre = FactoryGirl.create(:chapitre)
-    ressource = FactoryGirl.create(:ressource, chapitre_id: 1)
     get :index
     assert_not_nil assigns(:chapitres)
 
-    assert_equal 1, chapitre.ressources.first.id
+    assert_equal Ressource.first.title, @chapitre.ressources.first.title
   end
 
   def test_show
-    chapitre = FactoryGirl.create(:chapitre)
-    ressource = FactoryGirl.create(:ressource, chapitre_id: 1)
-    get :show
-    assert_equal 1, chapitre.ressources.first.id
+    get :show, id: 1
+    assert_equal Ressource.first.title , @chapitre.ressources.first.title
   end
 end
