@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class RessourcesControllerTest < ActionController::TestCase
+class ChapitresControllerTest < ActionController::TestCase
   def login_as_admin
     # Every ENV['FOO'] should be available in a file called .env at the root of the app
     # Syntax example of the .env file

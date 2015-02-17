@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
-  root to: 'ressources#index'
-  get 'ressources/index'
+  root to: 'chapitres#index'
+  get 'chapitres/index'
 end

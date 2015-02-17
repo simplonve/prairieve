@@ -1,4 +1,4 @@
-class RessourcesController < ApplicationController
+class ChapitresController < ApplicationController
   before_filter :authenticate
 
   def index
