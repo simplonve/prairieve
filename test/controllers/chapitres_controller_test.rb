@@ -31,4 +31,11 @@ class ChapitresControllerTest < ActionController::TestCase
 
     assert_equal 1, chapitre.ressources.first.id
   end
+
+  def test_show
+    chapitre = FactoryGirl.create(:chapitre)
+    ressource = FactoryGirl.create(:ressource, chapitre_id: 1)
+    get :show
+    assert_equal 1, chapitre.ressources.first.id
+  end
 end

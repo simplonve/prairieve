@@ -5,6 +5,10 @@ class ChapitresController < ApplicationController
     @chapitres = Chapitre.all
   end
 
+  def show
+    @chapitre = Chapitre.find(params[:id])
+  end
+
   protected
 
   def authenticate
