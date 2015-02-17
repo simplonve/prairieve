@@ -1,0 +1,7 @@
+.columns
+  .panel
+    %h4= link_to(ress.title, ress.url)
+    %ul.inline-list
+      %li= "#{display_level(ress)}".html_safe
+      %li= "#{display_lang(ress)}".html_safe
+      %li= ress.time.to_s + " min"

@@ -1,5 +1,22 @@
 @import 'foundation_and_overrides';
+$paragraph-font-size: 5rem;
 
 main {
   margin: 2em;
+}
+
+.piste_verte {
+  background-color: green
+}
+
+.piste_bleue {
+  background-color: blue
+}
+
+.piste_rouge {
+  background-color: red
+}
+
+.piste_noire {
+  background-color: black
 }

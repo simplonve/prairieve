@@ -2,7 +2,5 @@
   %h3= chapitre.title
   %p= chapitre.created_at.strftime("%e %b.")
   %p= chapitre.intro
-- chapitre.ressources.each do |ress|
-  .columns
-    .panel
-      %h4= ress.title
+- chapitre.ressources.each do |ressource|
+  = render('shared/ressource', ress: ressource)
