@@ -10,5 +10,6 @@
     = render "layouts/menu_bar"
     %main
       .row 
-        = render "layouts/intro"
-        = yield
+        .columns.medium-9.medium-centered
+          = render "layouts/intro"
+          = yield
