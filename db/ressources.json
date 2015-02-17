@@ -1,8 +1,32 @@
-[{ 
-  "title": "Qu'est-ce que l'internet",
+[{
+  "title": "Declaration du Cyberespace ",
   "url": "http://editions-hache.com/essais/barlow/barlow2.html",
-  "lang": "en",
+  "lang": "fr",
   "level": "verte",
+  "time": 10,
+  "created_at": "2015-02-15 21:27:20",
+  "chapitre_id": 1
+},{
+  "title": "A Brief History of the Computer (b.c. – 1993a.d.)",
+  "url": "http://www.jeremymeyers.com/comp/",
+  "lang": "en",
+  "level": "rouge",
+  "time": 15,
+  "created_at": "2015-02-15 21:27:20",
+  "chapitre_id": 1
+},{
+  "title": "Introduction au language de programmation",
+  "url": "https://www.youtube.com/watch?v=OiqL9W9_Hlw",
+  "lang": "fr",
+  "level": "verte",
+  "time": 20,
+  "created_at": "2015-02-15 21:27:20",
+  "chapitre_id": 2
+},{
+  "title": "Hello world in 200 languages",
+  "url": "http://www.scriptol.com/programming/hello-world.php",
+  "lang": "en",
+  "level": "bleue",
   "time": 20,
   "created_at": "2015-02-15 21:27:20",
   "chapitre_id": 2
