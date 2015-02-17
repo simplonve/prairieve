@@ -1,4 +1,3 @@
 - @chapitres.each do |chap|
-  %h3= chap.title
-  %p= chap.created_at.strftime("%e %b.")
   %hr 
+  = render('shared/chapitre', chapitre: chap)
