@@ -2,5 +2,10 @@
   %h3= chapitre.title
   %p= chapitre.created_at.strftime("%e %b.")
   %p= chapitre.intro
-- chapitre.ressources.each do |ressource|
+  %hr
+%h3 Partie 1 : Lecture
+- chapitre.ressources.lecture.each do |ressource|
+  = render('shared/ressource', ress: ressource)
+%h3 Partie 2 : Exercices
+- chapitre.ressources.exercice.each do |ressource|
   = render('shared/ressource', ress: ressource)
