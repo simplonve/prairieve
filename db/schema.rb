@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(version: 20150217155946) do
     t.text     "desc"
     t.string   "tags"
     t.string   "categorie"
+    t.string   "media"
   end
 
   add_index "ressources", ["chapitre_id"], name: "index_ressources_on_chapitre_id"
