@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   resource :reset_password
 
   resources :chapitres
+  resources :ressources, only: [:show]
 end

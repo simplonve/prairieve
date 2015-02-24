@@ -1,6 +1,6 @@
 .columns
   .panel
-    %h4= link_to(ress.title, ress.url)
+    %h4= link_to(ress.title, ressource_path(ress.id))
     %ul.inline-list
       %li.label= ress.tags
       %li= "#{display_level(ress)}".html_safe
