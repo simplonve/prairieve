@@ -15,4 +15,13 @@ class StatTest < ActiveSupport::TestCase
     trace = {user_id: user.id, user: user.name, ressource_id: ressource.id, ressource: ressource.title}
     assert_equal JSON.generate(trace), Stat.first.trace
   end
+
+  test 'view stats' do
+    user = FactoryGirl.create(:user)
+    ressource = FactoryGirl.create(:ressource)
+    Stat.create_for(user, ressource)
+
+    stat = Stat.generate_array
+    assert_equal user.id, stat.first['user_id']
+  end
 end

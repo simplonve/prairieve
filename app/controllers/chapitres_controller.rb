@@ -8,7 +8,4 @@ class ChapitresController < ApplicationController
   def show
     @chapitre = Chapitre.find(params[:id])
   end
-
-  def welcome
-  end
 end
