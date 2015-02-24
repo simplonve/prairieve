@@ -1,5 +1,6 @@
 class ChapitresController < ApplicationController
-  before_filter :authenticate
+  skip_filter :authenticate_user, only: [:welcome]
+
 
   def index
     @chapitres = Chapitre.all
@@ -7,6 +8,9 @@ class ChapitresController < ApplicationController
 
   def show
     @chapitre = Chapitre.find(params[:id])
+  end
+
+  def welcome
   end
 
   protected
