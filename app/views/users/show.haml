@@ -1,0 +1,7 @@
+%h2
+  = @user.name
+
+- if @user == current_user
+  = form_tag sessions_path, method: 'delete' do
+    = submit_tag t('.logout'), class: 'button'
+  = link_to t('.edit'), edit_user_path(current_user), class: 'button'

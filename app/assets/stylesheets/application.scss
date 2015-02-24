@@ -1,5 +1,10 @@
 @import 'foundation_and_overrides';
 
+.top-bar{ 
+  height: 3rem;
+  input {height: 2rem}
+}
+
 main {
   margin: 2em;
 }

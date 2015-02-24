@@ -9,3 +9,19 @@ fr:
   chap3: "Chapitre 3 - 22 Mars"
   chap4: "Chapitre 4 - 29 Mars"
   chap5: "Chapitre 5 - 05 Avril"
+  layouts:
+    menu_bar:
+      login: "Se connecter"
+      mail: "Email"
+      password: "Mot de passe"
+      reset_password: "Changer son mdp"
+  users:
+    show:
+      logout: "Se déconnecter"
+      edit: "Modifier"
+      email: "email: [%{email}](mailto:%{email})."
+    edit:
+      user_email: "Email"
+      user_name: "Nom"
+      cancel: "Annuler"
+      submit: "Mettre à jour"
