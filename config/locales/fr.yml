@@ -25,3 +25,13 @@ fr:
       user_name: "Nom"
       cancel: "Annuler"
       submit: "Mettre à jour"
+  datetime:
+    distance_in_words:
+      about_x_seconds: "%{count} sec"
+      about_x_minutes: "%{count} min"
+      about_x_hours:
+        one: "1 heure"
+        other: "%{count} hrs"
+      about_x_days:
+        one: "1 jour"
+        other: "%{count} days"

@@ -1,2 +1,16 @@
-- @stat.each do |stat|
- = stat
+%ul
+  - @ressources.each do |ressource|
+    %li
+      = @stat[ressource.id.to_i]
+      = ressource.title
+%hr
+- @raw_stat.each do |stat|
+  .row
+    .columns.medium-2
+      %p
+        il y a
+        = time_ago_in_words stat.created_at 
+    .columns.medium-2
+      = JSON.parse(stat.trace)["user"]
+    .columns.medium-8
+      = JSON.parse(stat.trace)["ressource"]
