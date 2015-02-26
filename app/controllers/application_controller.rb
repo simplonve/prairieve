@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
   helper_method :current_user
 
   before_filter :authenticate_user
+  after_filter :track_action
 
   def authenticate_user
     redirect_to welcome_path unless current_user
@@ -13,8 +14,9 @@ class ApplicationController < ActionController::Base
     @current_user ||= User.find(session[:user_id]) if session[:user_id]
   end
 
-  def track
-    binding.pry
-    Stat.create_for(current_user) if current_user
+  protected
+
+  def track_action
+    ahoy.track "Page view", "#{controller_name}##{action_name}"
   end
 end

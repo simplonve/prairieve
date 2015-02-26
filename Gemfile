@@ -16,7 +16,8 @@ gem 'rails-clean-logs'
 
 gem 'bcrypt'
 
-# gem 'foundation-rails'
+gem 'ahoy_matey'
+gem 'activeuuid', '>= 0.5.0'
 gem 'font-awesome-sass', '~> 4.2.0'
 gem 'haml'
 
