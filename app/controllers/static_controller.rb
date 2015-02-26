@@ -1,10 +1,11 @@
+
 class StaticController < ApplicationController
+  include ApplicationHelper 
   skip_filter :authenticate_user, only: [:welcome]
+  skip_filter :current_user, only: [:welcome]
 
   def stat
-    @raw_stat = Stat.last_visited.limit(10)
-    @stat = Stat.ress_view_counter
-    @ressources = Ressource.all
+    @pie_chart = pie_chart_helper
   end
 
   def welcome

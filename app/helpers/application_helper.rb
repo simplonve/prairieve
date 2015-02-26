@@ -14,4 +14,22 @@ module ApplicationHelper
     when 'noire' then "<div class='label piste_noire'> noire </div>"
     end
   end
+
+  def pie_chart_helper
+    @pie_chart = {}
+    today_ressource_ids = Ahoy::Event.today
+                                     .ressources_clicked
+                                     .map{|event| event.properties["ressource_id"]}
+
+    today_ressource_ids.each do |id|
+       @pie_chart[find_ressource(id)] ||= 0
+       @pie_chart[find_ressource(id)] += 1 
+    end 
+
+    @pie_chart
+  end
+
+  def find_ressource(id)
+    Ressource.find(id.to_i).title
+  end
 end

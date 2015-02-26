@@ -6,5 +6,8 @@ module Ahoy
     belongs_to :user
 
     serialize :properties, JSON
+    
+    scope :today, -> { where("time >= ?", Time.zone.now.beginning_of_day) }
+    scope :ressources_clicked, -> { where(name: 'Ressource clicked') }
   end
 end
