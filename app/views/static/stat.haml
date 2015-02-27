@@ -1,7 +1,16 @@
 = javascript_include_tag "highcharts.js", "chartkick"
 
-%h3 Nbe de ressources vues cette semaine
-= line_chart @line_chart
+%h3 Ressources vues cette semaine
+= line_chart @week_line_chart
+
+%h3 Ressources vues ce mois
+= line_chart @month_line_chart
 
 %h3 Titre des ressources vues aujourd'hui
-= pie_chart @pie_chart
+= pie_chart @today_pie_chart
+
+%h3 Ressources les plus lu
+= bar_chart @popular_ressources_chart
+
+%h3 Total des ressources lu par utilisateur
+= bar_chart @user_clicks_chart

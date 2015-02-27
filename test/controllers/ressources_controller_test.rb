@@ -22,11 +22,12 @@ class RessourcesControllerTest < ActionController::TestCase
   
   test "pie_chart" do
     get :show, id: @ressource.id
-    assert_equal 1, pie_chart_helper['Declaration du Cyberespace']
+    assert_equal 1, today_pie_chart_hash['Declaration du Cyberespace']
   end
 
   test "line_chart" do
     get :show, id: @ressource.id
-    assert_equal Time.now.midnight.to_i, line_chart_helper.first.first
+    midnight_today = (Time.now.midnight + 2.hours).to_i
+    assert_equal midnight_today, week_line_chart_hash.keys.first
   end
 end

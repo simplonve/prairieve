@@ -15,30 +15,45 @@ module ApplicationHelper
     end
   end
 
-  def find_ressource(id)
-    Ressource.find(id.to_i).title
-  end
-
   def days_ago(time)
     day_int = Time.now.day- time.day
     day_int.day.ago.midnight.to_i
   end
 
-  def pie_chart_helper
-    ress_titles = Ahoy::Event.ressources_clicked
-                             .today
-                             .map{|event| event.properties["ressource_id"]}
-                             .map{|id| find_ressource(id)}
-    generate_hash(ress_titles)
+  def ressources_clicked
+    Ahoy::Event.ressources_clicked
+  end
+  
+  def today_pie_chart_hash
+    today_titles = ressources_clicked.today
+                                     .map{|event| event.properties["ressource_id"] }
+                                     .map{|id| Ressource.find(id.to_i).title}
+    generate_hash(today_titles)
   end
 
-
-  def line_chart_helper
-    datetime_of_clicks = Ahoy::Event.ressources_clicked
-                                    .last_7_days
-                                    .map{|event| days_ago(event.time)}
-    
+  def week_line_chart_hash
+    datetime_of_clicks = ressources_clicked.last_7_days
+                                           .map{|event| days_ago(event.time)}
     generate_hash(datetime_of_clicks)
+  end
+
+  def month_line_chart_hash
+    datetime_of_clicks = ressources_clicked.last_30_days
+                                           .map{|event| days_ago(event.time)}
+    generate_hash(datetime_of_clicks)
+  end
+
+  def user_clicks_table_hash
+    month_user_clicks = ressources_clicked.last_30_days
+                                          .map(&:user_id)
+                                          .map{|id| User.find(id.to_i).name}
+    unordered_hash = generate_hash(month_user_clicks)
+  end
+
+  def popular_ressources_hash
+    popular_ressources = ressources_clicked.map{|event| event.properties["ressource_id"] }
+                                           .map{|id| Ressource.find(id.to_i).title}
+    unordered_hash = generate_hash(popular_ressources)
   end
 
   def generate_hash(ary)
@@ -49,7 +64,12 @@ module ApplicationHelper
     ary.each do |entry|
       hash[entry] += 1
     end
+    sort_hash_by_values(hash)
+  end
 
-    hash
+  def sort_hash_by_values(hash)
+    ordered_hash = Hash.new
+    hash.keys.sort.each{|k| ordered_hash[hash.values_at(k)[0]] = k}
+    ordered_hash.invert
   end
 end
