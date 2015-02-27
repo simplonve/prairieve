@@ -6,6 +6,7 @@ class StaticController < ApplicationController
 
   def stat
     @pie_chart = pie_chart_helper
+    @line_chart = line_chart_helper
   end
 
   def welcome

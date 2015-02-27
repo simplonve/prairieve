@@ -8,6 +8,7 @@ module Ahoy
     serialize :properties, JSON
     
     scope :today, -> { where("time >= ?", Time.zone.now.beginning_of_day) }
+    scope :last_7_days, -> { where("time >= ?", 7.day.ago) }
     scope :ressources_clicked, -> { where(name: 'Ressource clicked') }
   end
 end

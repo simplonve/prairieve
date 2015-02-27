@@ -15,21 +15,41 @@ module ApplicationHelper
     end
   end
 
-  def pie_chart_helper
-    @pie_chart = {}
-    today_ressource_ids = Ahoy::Event.today
-                                     .ressources_clicked
-                                     .map{|event| event.properties["ressource_id"]}
-
-    today_ressource_ids.each do |id|
-       @pie_chart[find_ressource(id)] ||= 0
-       @pie_chart[find_ressource(id)] += 1 
-    end 
-
-    @pie_chart
-  end
-
   def find_ressource(id)
     Ressource.find(id.to_i).title
+  end
+
+  def days_ago(time)
+    day_int = Time.now.day- time.day
+    day_int.day.ago.midnight.to_i
+  end
+
+  def pie_chart_helper
+    ress_titles = Ahoy::Event.ressources_clicked
+                             .today
+                             .map{|event| event.properties["ressource_id"]}
+                             .map{|id| find_ressource(id)}
+    generate_hash(ress_titles)
+  end
+
+
+  def line_chart_helper
+    datetime_of_clicks = Ahoy::Event.ressources_clicked
+                                    .last_7_days
+                                    .map{|event| days_ago(event.time)}
+    
+    generate_hash(datetime_of_clicks)
+  end
+
+  def generate_hash(ary)
+    hash = Hash.new do |hash, key|
+        hash[key] = 0
+    end 
+
+    ary.each do |entry|
+      hash[entry] += 1
+    end
+
+    hash
   end
 end

@@ -24,4 +24,9 @@ class RessourcesControllerTest < ActionController::TestCase
     get :show, id: @ressource.id
     assert_equal 1, pie_chart_helper['Declaration du Cyberespace']
   end
+
+  test "line_chart" do
+    get :show, id: @ressource.id
+    assert_equal Time.now.midnight.to_i, line_chart_helper.first.first
+  end
 end
