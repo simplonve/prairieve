@@ -18,6 +18,7 @@ FactoryGirl.define do
     categorie 'lecture'
     media 'article'
     feedback true
+    user_id 1
   end
 
   factory :chapitre do
