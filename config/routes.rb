@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: 'chapitres#index'
+  root to: 'static#welcome'
 
   get '/welcome', to: 'static#welcome'
   get '/stat', to: 'static#stat'

@@ -1,15 +1,16 @@
-.columns
-  %h3= chapitre.title
-  %p= chapitre.created_at.strftime("%e %b.")
-  %p= chapitre.intro
-  %hr
+%h3= chapitre.title
+%p= link_to "Retours d'exploration", "", class: "feedback_link"
+%p= chapitre.desc
+.columns.feedback_box
+  - chapitre.ressources.feedback.each do |ressource|
+    .panel
+      = render('shared/ressource', ress: ressource, chap: chapitre)
+      %p= @users.find(ressource.user_id).name
 %h3 Partie 1 : Lecture
 - chapitre.ressources.lecture.each do |ressource|
   = render('shared/ressource', ress: ressource, chap: chapitre)
+  %hr
 %h3 Partie 2 : Exercices
 - chapitre.ressources.exercice.each do |ressource|
   = render('shared/ressource', ress: ressource, chap: chapitre)
-%h5= link_to "Voir les retours d'exploration", "", class: "feedback_link"
-.columns.panel.feedback_box
-  - chapitre.ressources.feedback.each do |ressource|
-    = render('shared/feedback_ressource', ress: ressource, chap: chapitre)
+  %hr

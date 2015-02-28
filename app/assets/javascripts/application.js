@@ -4,10 +4,9 @@
 //= require_self
 
 $(document).ready(function(){
-  $('.feedback_box').fadeOut("fast");
-  $('#feedback_link').click(function(){
-    $(this).next().toggle(function(event){
-      event.preventDefault();
-    });
+  $('.feedback_box').hide();
+  $('.feedback_link').click(function(){
+    $(".feedback_box").toggle();
+    return false
   });
 });
