@@ -4,6 +4,7 @@
       %li=link_to(t('home'), root_path)
     %ul.right
       - if current_user
+        %li= link_to t('retour_exploration'), new_chapitre_ressource_path(1), class: "button small"
         %li= link_to "#{current_user.name.capitalize}", user_path(current_user)
       - else
         = form_tag sessions_path do

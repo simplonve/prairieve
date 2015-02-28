@@ -1,10 +1,10 @@
 .columns
   .panel
-    %h4= link_to(ress.title, ressource_path(ress.id))
+    %h4= link_to(ress.title, chapitre_ressource_path(ress.id, chap.id))
     %ul.inline-list
       %li.label= ress.tags
-      %li= "#{display_level(ress)}".html_safe
-      %li= "#{display_lang(ress)}".html_safe
+      %li= "#{display_level(ress.level)}".html_safe
+      %li= "#{display_lang(ress.lang)}".html_safe
       %li= ress.time.to_s + " min"
       %li= ress.media
     %p= ress.desc

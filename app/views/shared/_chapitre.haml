@@ -5,7 +5,11 @@
   %hr
 %h3 Partie 1 : Lecture
 - chapitre.ressources.lecture.each do |ressource|
-  = render('shared/ressource', ress: ressource)
+  = render('shared/ressource', ress: ressource, chap: chapitre)
 %h3 Partie 2 : Exercices
 - chapitre.ressources.exercice.each do |ressource|
-  = render('shared/ressource', ress: ressource)
+  = render('shared/ressource', ress: ressource, chap: chapitre)
+%h5= link_to "Voir les retours d'exploration", "", class: "feedback_link"
+.columns.panel.feedback_box
+  - chapitre.ressources.feedback.each do |ressource|
+    = render('shared/feedback_ressource', ress: ressource, chap: chapitre)

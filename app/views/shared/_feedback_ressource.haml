@@ -1,0 +1,11 @@
+.columns
+  %h5= link_to(ress.title, chapitre_ressource_path(ress.id, chap.id))
+  %ul.inline-list
+    %li 
+      par
+      = @users.find(ress.user_id).name
+    %li.label= ress.tags
+    %li= "#{display_level(ress.level)}".html_safe
+    %li= "#{display_lang(ress.lang)}".html_safe
+  %p= ress.desc.first 400
+  %hr

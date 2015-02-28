@@ -12,4 +12,8 @@
     %main
       .row 
         .columns.medium-9.medium-centered
+          - if flash[:error].present?
+            %p.label.alert.flash-error= "#{flash[:error]}"
+          - if flash[:notice]
+            %p.label.flash-notice= "#{flash[:notice]}"
           = yield

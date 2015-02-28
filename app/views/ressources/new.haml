@@ -1,0 +1,32 @@
+%h3= t('retour_exploration')
+%p= t('ajoutez_feedback')
+=  form_for @ressource, url: chapitre_ressources_path(@chapitre.id) do |form|
+  = form.label :title, 'Titre'
+  = form.text_field :title 
+  = form.label :url, 'URL'
+  = form.text_field :url
+  = form.label :desc, 'Commentaires (pas plus de 400 caractères)'
+  = form.text_area :desc
+  = form.label :desc, 'Chapitre lié à la ressource (par défaut : dernier chapitre publié)'
+  = form.collection_select :chapitre_id, Chapitre.all, :id, :title
+  = form.label :tags, 'Tags ex. "plein, de, tags, séparés, par, des, virgules'
+  = form.text_field :tags
+  %p 
+    Piste
+    = display_level('verte').html_safe
+    = form.radio_button :level, "verte"
+  %p 
+    = display_level('bleue').html_safe
+    = form.radio_button :level, "bleue"
+  %p 
+    = display_level('rouge').html_safe
+    = form.radio_button :level, "rouge"
+  %p 
+    = display_level('noire').html_safe
+    = form.radio_button :level, "noire"
+  %p 
+    = display_lang('fr').html_safe
+    = form.radio_button :lang, "fr"
+    = display_lang('en').html_safe
+    = form.radio_button :lang, "en"
+  = form.submit 'Ajouter la ressource', class: "button small"
