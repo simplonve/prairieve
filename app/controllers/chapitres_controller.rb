@@ -3,6 +3,8 @@ class ChapitresController < ApplicationController
 
   def index
     @chapitres = Chapitre.all
+    @users = User.all
+    @ressource = Ressource.new
   end
 
   def show

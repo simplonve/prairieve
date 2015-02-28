@@ -6,6 +6,7 @@ class ChapitresControllerTest < ActionController::TestCase
     session[:user_id] = user.id
 
     get :index
+    assert :success
     assert_not_nil assigns(:chapitres)
   end
 
@@ -15,6 +16,7 @@ class ChapitresControllerTest < ActionController::TestCase
     session[:user_id] = user.id
 
     get :show, id: chapitre.id
+    assert :success
     assert_not_nil assigns(:chapitre)
   end
 end

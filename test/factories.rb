@@ -13,6 +13,11 @@ FactoryGirl.define do
     lang "en"
     level "green"
     time 10
+    desc 'wow'
+    tags 'plein, de, tags'
+    categorie 'lecture'
+    media 'article'
+    feedback true
   end
 
   factory :chapitre do

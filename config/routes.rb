@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :users, only: [:edit, :update, :show]
   resource :reset_password
 
-  resources :chapitres
-  resources :ressources, only: [:show]
+  resources :chapitres do
+    resources :ressources
+  end
 end
