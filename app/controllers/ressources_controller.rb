@@ -17,7 +17,7 @@ class RessourcesController < ApplicationController
     new_ressource.user_id  = current_user.id
 
     if new_ressource.save
-      redirect_to :root, notice: t('feedbackthx')
+      redirect_to chapitre_path(chapitre.id), notice: t('feedbackthx')
     else
       flash[:error] = t('feedbackerror')
       redirect_to new_chapitre_ressource_path(chapitre.id)

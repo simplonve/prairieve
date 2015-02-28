@@ -19,7 +19,7 @@ class RessourcesControllerTest < ActionController::TestCase
 
   test "show" do
     assert @ressource.valid?
-    get :show, id: @ressource.id, chapitre_id: @chapitre
+    get :show, id: @ressource.id, chapitre_id: @chapitre.id, user_id: @user.id
     assert_not_nil assigns(:ressource)
     assert_redirected_to @ressource.url
   end
@@ -31,11 +31,11 @@ class RessourcesControllerTest < ActionController::TestCase
   end
 
   test "create ressource feedback" do
-    post :create, chapitre_id: @chapitre, ressource: {url: @ressource.url}
+    post :create, chapitre_id: @chapitre.id, ressource: {url: "foo", title: "bar"}
     ressource_created = @chapitre.ressources.first
     assert_equal @ressource.url, ressource_created.url
     assert_equal true, ressource_created.feedback
-    assert_redirected_to root_url
+    assert_redirected_to chapitre_path @chapitre.id
   end
 
   test "ahoy event" do

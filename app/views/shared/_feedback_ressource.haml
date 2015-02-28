@@ -3,7 +3,7 @@
   %ul.inline-list
     %li 
       par
-      = @users.find(ress.user_id).name
+      = @users.find(ress.user_id).name if ress.user_id
     %li.label= ress.tags
     %li= "#{display_level(ress.level)}".html_safe
     %li= "#{display_lang(ress.lang)}".html_safe
