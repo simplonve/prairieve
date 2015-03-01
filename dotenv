@@ -1,2 +1,3 @@
 LOGUSR=foo
 LOGPWD=bar
+MAILER_HOST=localhost
