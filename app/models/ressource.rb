@@ -6,5 +6,6 @@ class Ressource < ActiveRecord::Base
 
   scope :lecture, ->  { where(categorie: "lecture") }
   scope :exercice, ->  { where(categorie: "exercice") }
+  scope :activite, ->  { where(categorie: "activite") }
   scope :feedback, ->  { where(feedback: true) }
 end

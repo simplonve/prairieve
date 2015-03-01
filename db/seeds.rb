@@ -8,4 +8,3 @@ parse_json('db/ressources.json').each do |data|
   Ressource.create(data)
 end
 
-User.create(name: 'Jean', email:"foo@bar.com", password:'azerty')
