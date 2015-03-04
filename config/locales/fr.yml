@@ -26,16 +26,6 @@ fr:
       user_name: "Nom"
       cancel: "Annuler"
       submit: "Mettre à jour"
-  datetime:
-    distance_in_words:
-      about_x_seconds: "%{count} sec"
-      about_x_minutes: "%{count} min"
-      about_x_hours:
-        one: "1 heure"
-        other: "%{count} hrs"
-      about_x_days:
-        one: "1 jour"
-        other: "%{count} days"
   retour_exploration: "Ajouter un retour d'exploration"
   ajoutez_feedback: 'Ajoutez vous-même une ressource qui vous a semblé importante lors de vos lectures ou exercices. Un lien vous a particulièrement plu ? Vous avez travaillé en groupe sur certains documents ? Vous ne pouvez pas regarder ce chapitre sans y ajouter une ressource de votre cru ? Prenez 5 mins pour faire découvrir aux autres le fruit de vos explorations !'
   feedbackthx: 'Ressource crée, merci pour la participation !'
@@ -43,3 +33,4 @@ fr:
   user_mailer:
     reset_password:
       subject: "Votre accès à la plateforme Simplonline - FOAD de Simplon.co"
+  important: "A lire et relire !"

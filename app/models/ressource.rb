@@ -4,6 +4,7 @@ class Ressource < ActiveRecord::Base
   belongs_to :chapitre
   belongs_to :user
 
+  default_scope { order('(case when important then 1 else 0 end) DESC, created_at ASC')}
   scope :lecture, ->  { where(categorie: "lecture") }
   scope :exercice, ->  { where(categorie: "exercice") }
   scope :activite, ->  { where(categorie: "activite") }

@@ -1,5 +1,7 @@
 %h4= link_to(ress.title, chapitre_ressource_path(ress.id, chap.id))
 %ul.inline-list
+  - if ress.important?
+    %li.label.alert= t('important')
   %li.label= ress.tags
   %li= "#{display_level(ress.level)}".html_safe
   %li= "#{display_lang(ress.lang)}".html_safe
