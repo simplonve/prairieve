@@ -2,7 +2,7 @@ class ChapitresController < ApplicationController
   skip_filter :authenticate_user, only: [:welcome]
 
   def show
-    @chapitre = Chapitre.find(params[:id])
+    @chapitre = Chapitre.includes(:ressources).find(params[:id])
     @users = User.all
     @ressource = Ressource.new
     @chapitre_feedbacks = @chapitre.ressources.map(&:feedback).compact
