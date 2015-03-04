@@ -1,7 +1,7 @@
 %h3= @chapitre.title
 
-%p.feedback_link= link_to_if(@chapitre_feedbacks.any?, "#{@chapitre_feedbacks.count} retour(s) d'exploration", ""){}
 %p= @chapitre.desc
+%p.feedback_link= link_to_if(@chapitre_feedbacks.any?, "#{@chapitre_feedbacks.count} retour(s) d'exploration", ""){}
 .columns.feedback_box
   - @chapitre.ressources.feedback.each do |ressource|
     .panel

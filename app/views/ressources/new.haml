@@ -11,22 +11,19 @@
   = form.collection_select :chapitre_id, Chapitre.all, :id, :title
   = form.label :tags, 'Tags ex. "plein, de, tags, séparés, par, des, virgules'
   = form.text_field :tags
+
+  = form.label :level, 'Difficulté - Piste'
+  = form.radio_button :level, "verte"
+  = display_level('verte').html_safe
+  = form.radio_button :level, "bleue"
+  = display_level('bleue').html_safe
+  = form.radio_button :level, "rouge"
+  = display_level('rouge').html_safe
+  = form.radio_button :level, "noire"
+  = display_level('noire').html_safe
   %p 
-    Piste
-    = display_level('verte').html_safe
-    = form.radio_button :level, "verte"
-  %p 
-    = display_level('bleue').html_safe
-    = form.radio_button :level, "bleue"
-  %p 
-    = display_level('rouge').html_safe
-    = form.radio_button :level, "rouge"
-  %p 
-    = display_level('noire').html_safe
-    = form.radio_button :level, "noire"
-  %p 
-    = display_lang('fr').html_safe
     = form.radio_button :lang, "fr"
-    = display_lang('en').html_safe
+    = display_lang('fr').html_safe
     = form.radio_button :lang, "en"
+    = display_lang('en').html_safe
   = form.submit 'Ajouter la ressource', class: "button small"
