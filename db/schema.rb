@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150228134636) do
+ActiveRecord::Schema.define(version: 20150304083438) do
 
   create_table "ahoy_events", id: false, force: true do |t|
     t.binary   "id"
@@ -49,6 +49,7 @@ ActiveRecord::Schema.define(version: 20150228134636) do
     t.string   "media"
     t.boolean  "feedback"
     t.string   "user_id"
+    t.boolean  "important"
   end
 
   add_index "ressources", ["chapitre_id"], name: "index_ressources_on_chapitre_id"
