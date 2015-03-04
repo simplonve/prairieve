@@ -1,4 +1,3 @@
-
 class StaticController < ApplicationController
   include ApplicationHelper 
   skip_filter :authenticate_user, only: [:welcome]
@@ -13,5 +12,6 @@ class StaticController < ApplicationController
   end
 
   def welcome
+    @chapitres = Chapitre.all
   end
 end
