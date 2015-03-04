@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150304083438) do
+ActiveRecord::Schema.define(version: 20150304095637) do
 
   create_table "ahoy_events", id: false, force: true do |t|
     t.binary   "id"
@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(version: 20150304083438) do
     t.string   "url"
     t.string   "lang"
     t.string   "level"
-    t.integer  "time"
+    t.string   "time"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "chapitre_id"
