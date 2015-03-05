@@ -15,8 +15,5 @@
 
 - if current_user
   %ul.breadcrumbs
-    %li=link_to(t('chap1'), chapitre_path(id: 1))
-    %li.unavailable=link_to(t('chap2'), chapitre_path(id: 2))
-    %li.unavailable=link_to(t('chap3'), chapitre_path(id: 3))
-    %li.unavailable=link_to(t('chap4'), chapitre_path(id: 4))
-    %li.unavailable=link_to(t('chap5'), chapitre_path(id: 5))
+    - Chapitre.all.each do |chap|
+      %li=link_to(t("chap#{chap.id}"), chapitre_path(id: chap.id))

@@ -1,4 +1,17 @@
-[{ 
-  "title": "Chapitre 1 : Hello Linux World",
-  "desc": "Ce premier chapitre de la Prairie est plutot léger. Les ressources proposées seront principalement liées aux idées et concepts fondamentaux de l'informatique d'hier et d'aujourd'hui, depuis l'internet et le web jusqu'à des exercices pour s'entrainer à l'environnement Linux. Il y a pas mal de notions historiques qui permettent de comprendre le monde dans lequel nous allons nous inscrire pendant 6 mois. Enjoy !"
-}]
+[
+  {"title": "Chapitre 1 - Hello Linux World",
+    "desc": "Ce premier chapitre de la Prairie est plutot léger. Les ressources proposées seront principalement liées aux idées et concepts fondamentaux de l'informatique d'hier et d'aujourd'hui, depuis l'internet et le web jusqu'à des exercices pour s'entrainer à l'environnement Linux. Il y a pas mal de notions historiques qui permettent de comprendre le monde dans lequel nous allons nous inscrire pendant 6 mois. Enjoy !"
+  },
+  {"title": "Chapitre 2 - Le développement web",
+    "desc": ""
+  },
+  {"title": "Chapitre 3 - Qu'est-ce que la programmation ?",
+    "desc": ""
+  },
+  {"title": "Chapitre 4 - Les languages de programmation, premiers pas",
+    "desc": ""
+  },
+  {"title": "Chapitre 5 - Le travail collaboratif : workflow et partage",
+    "desc": ""
+  }
+]
