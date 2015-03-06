@@ -35,4 +35,31 @@ class User < ActiveRecord::Base
     self.password_confirmation = password_confirmation
     self.save!
   end
+
+  def self.inscription(email)
+    save_and_reset_password(email)
+  end
+
+  private
+  def self.generate_password
+    chars = [*('a'..'z'),*('A'..'Z'), *('0'..'9')]
+    newpass = ""
+    7.times do |i|
+      newpass << chars[rand(chars.size-1)]
+    end
+    1.upto(7) { |i| newpass << chars[rand(chars.size-1)] }
+    newpass
+  end
+
+  def self.save_and_reset_password(email)
+    tmp_pwd = generate_password
+    user = new(email: email.downcase, name: email.split('@').first, password: tmp_pwd, password_confirmation: tmp_pwd)
+
+    if user.save
+      reset_password(user.email)
+    else
+      puts user.errors.full_messages
+    end
+    user
+  end
 end
