@@ -32,5 +32,5 @@ fr:
   feedbackerror: "Attention, le titre ou l'url existe déjà dans la base de données."
   user_mailer:
     reset_password:
-      subject: "Votre accès à la Prarie de Simplon.ve"
+      subject: "Votre accès à la Prairie de Simplon.ve"
   important: "A lire et relire !"
