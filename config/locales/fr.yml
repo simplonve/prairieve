@@ -2,8 +2,8 @@ fr:
   home: "Accueil"
   big_title: "Prairie.ve"
   welcome_message: |-
-    Voici l'accès à la documentation de la prairie. 
-    Lisez avec passion !
+    Tous les lundis à partir du 9 mars jusqu'à la rentrée le 15 avril, un chapitre est publié sur cette plateforme. Il comporte 3 parties -- lectures | exercices | activités --
+    Chaque partie est composée de ressources (liens externes) adaptés à votre niveau : que vous débutiez depuis scratch ou bien que vous soyez à l'aise en Java ou Wordpress.
   chap1: "Chapitre 1 - 08 Mars"
   chap2: "Chapitre 2 - 15 Mars"
   chap3: "Chapitre 3 - 22 Mars"
@@ -33,4 +33,4 @@ fr:
   user_mailer:
     reset_password:
       subject: "Votre accès à la Prairie de Simplon.ve"
-  important: "A lire et relire !"
+  important: "Important !"
