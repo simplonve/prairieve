@@ -2,11 +2,6 @@
 
 %p= @chapitre.desc.html_safe
 %p.feedback_link= link_to_if(@chapitre_feedbacks.any?, "#{@chapitre_feedbacks.count} retour(s) d'exploration", ""){}
-.columns.feedback_box
-  - @chapitre.ressources.feedback.each do |ressource|
-    .panel
-      = render('shared/ressource', ress: ressource, chap: @chapitre)
-      %p= @users.find(ressource.user_id).name
 %h3 Partie 1 : Lecture
 - @chapitre.ressources.lecture.each do |ressource|
   = render('shared/ressource', ress: ressource, chap: @chapitre)
@@ -19,3 +14,8 @@
 - @chapitre.ressources.activite.each do |ressource|
   = render('shared/ressource', ress: ressource, chap: @chapitre)
   %hr
+.columns.feedback_box
+  - @chapitre.ressources.feedback.each do |ressource|
+    .panel
+      = render('shared/ressource', ress: ressource, chap: @chapitre)
+      %p= @users.find(ressource.user_id).name

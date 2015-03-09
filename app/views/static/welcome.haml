@@ -5,30 +5,31 @@
   %h4= link_to chapitre.title, chapitre_path(chapitre.id)
 %hr
 %h4= t('documentation')
+%p Ajouter un retour d'exploration
+%p Chaque ressource est un appel à explorer vos propres liens. Une fois trouvé la perle qui vous parle grace à Google, ajoutez-la à un retour d'exploration-- bouton dans le menu en haut à droite. Choisissez le chapitre relatif à la ressource et publiez la nouvelle ressource pour tout le monde puisse en profiter.
+
 %p Les ressources sont triées selon certaines catégories :
 
 %p.label Tags
 %p Les tags permettront de facilement retrouver une ressource à partir d'un champs de recherche que l'on pourra mettre en place un jour comme petit exercice. Ils permettent aussi d'explorer de nouvelles ressources en partant de ces tags.
 %hr
-%p.label.alert A lire et relire
-%p Certains ressources sont plus importantes que d'autres. Celles avec ce label sont à étudier plusieurs fois dans le mois. Lisez relisez faites refaite. On apprend par la répétition !
+%p.label.alert= t('important')
+%p Certains ressources sont plus importantes que d'autres. Celles avec ce label sont à étudier plusieurs fois dans le mois. Lisez relisez, faites refaites. On apprend par la répétition !
 %hr
 %p
   = display_level("verte").html_safe
   = display_level("bleue").html_safe
   = display_level("rouge").html_safe
   = display_level("noire").html_safe
-%p La difficulté de compréhension d'une ressource varie selon le lecteur. La piste verte est une initiation. La bleue attend du lecteur qu'il soit capable de lire la documentation en lien avec la ressource. La rouge implique une très bonne connaissance du contexte pour pouvoir comprendrela ressource. La noire estime que le sujet est compris et la discussion est experte. 
+%p La difficulté de compréhension d'une ressource varie selon le lecteur. La piste verte est une initiation. La bleue attend du lecteur qu'il soit capable de lire la documentation en lien avec la ressource. La rouge implique une connaissance du contexte pour pouvoir comprendre la ressource. La noire estime que le sujet est compris et la discussion est experte. 
 %hr
 %p 10min/jour
-%p Un suggestion du temps a accorder à cette ressource. Les chapitres sont hebdomadaires, cette restriction du nombre de liens est voulu pour ne pas crouler sous un liste de 500 urls. Faites en bonne usage !
+%p Une suggestion du temps à accorder à cette ressource. Les chapitres sont hebdomadaires, cette restriction du nombre de ressources est voulue pour ne pas crouler sous un liste de 500 urls. Faites en bonne usage !
 %hr
 %p media
-%p Cette catégorie permet de comprendre rapidement le type de média : 
 %ul
   %li articles de blog ou de presse
   %li livre electronique à feuilleter plus ou moins profondément en fonction de vos envies de lecture,
   %li un tutoriel intéractif, une antisèche.
-  %li une vidéo, un screencast, une conférence filmé etc.
-
+  %li une vidéo, un screencast, une conférence filmée etc.
 %hr
