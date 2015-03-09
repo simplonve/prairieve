@@ -23,7 +23,7 @@ FactoryGirl.define do
 
   factory :chapitre do
     title "foo"
-    intro "bar"
+    desc "bar"
     ressources {|ressources| [ressources.association(:ressource)]}
   end
 

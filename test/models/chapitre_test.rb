@@ -11,4 +11,10 @@ class ChapitreTest < ActiveSupport::TestCase
 
     assert_equal false, new_chapitre.save
   end
+
+  test "create_and_mail" do
+    Chapitre.create_and_mail({title: "bar", desc: "baz"})
+    assert_equal User.all.count, ActionMailer::Base.deliveries.count
+    assert_equal "bar", Chapitre.last.title
+  end
 end

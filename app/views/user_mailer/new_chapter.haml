@@ -1,0 +1,20 @@
+!!!
+%html
+  %head
+    %meta{'content' => 'text/html; charset=UTF-8', 'http-equiv' =>'Content-Type'}
+  %body
+    %p
+      Bonjour
+      = @user.name
+    %p Un nouveau chapitre est disponible sur la plateforme de la prairie !
+    %p 
+      C'est par ici : 
+      = link_to chapitre_path(@chapitre.id), chapitre_path(@chapitre.id)
+    %h4= @chapitre.title
+    %p Au programme
+    %ul
+      = @chapitre.ressources.each do |ressource|
+        %li= ressource.title
+    %p À très bientôt !
+    %br
+    %p L'équipe Simplon.ve
