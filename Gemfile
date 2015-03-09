@@ -40,6 +40,7 @@ group :doc do
 end
   
 group :production do
+  gem 'newrelic_rpm'
   gem 'puma'
   gem 'unicorn'
   gem 'pg'
