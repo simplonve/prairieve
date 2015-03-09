@@ -1,4 +1,4 @@
-%h4= link_to(ress.title, chapitre_ressource_path(ress.id, chap.id))
+%h4= link_to(ress.title, chapitre_ressource_path(chap.id, ress.id))
 %ul.inline-list
   - if ress.important?
     %li.label.alert= t('important')
