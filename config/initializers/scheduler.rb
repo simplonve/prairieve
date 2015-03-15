@@ -4,7 +4,7 @@ scheduler = Rufus::Scheduler.new
 
 ary_chapitres = parse_json('db/chapitres.json')
 
-scheduler.at '2015-03-16 05:00:00' do      
+scheduler.at '2015-03-16 18:00:00' do      
   Chapitre.create_and_mail(ary_chapitres[1])
 end
 
