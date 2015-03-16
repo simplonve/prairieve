@@ -33,13 +33,13 @@ module ApplicationHelper
 
   def week_line_chart_hash
     datetime_of_clicks = ressources_clicked.last_7_days
-                                           .map{|event| days_ago(event.time)}
+                                           .map{|event| event.time.to_s.split.first}
     generate_hash(datetime_of_clicks)
   end
 
   def month_line_chart_hash
     datetime_of_clicks = ressources_clicked.last_30_days
-                                           .map{|event| days_ago(event.time)}
+                                           .map{|event| event.time.to_s.split.first}
     generate_hash(datetime_of_clicks)
   end
 
