@@ -7,10 +7,10 @@ class UserMailer < ActionMailer::Base
     mail(to: @user.email, subject: t('.subject'))
   end
 
-  def new_chapter(user, chapitre)
+  def new_chapter(user, chapitre_id)
     @url = 'truc'
     @user = user
-    @chapitre = chapitre
+    @chapitre = Chapitre.find(chapitre_id)
     mail(to: @user.email, subject: "Nouveau Chapitre de la Prairie en ligne")
   end
 end

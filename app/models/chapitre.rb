@@ -3,9 +3,11 @@ class Chapitre < ActiveRecord::Base
   has_many :ressources
 
   def self.create_and_mail(hash)
-    chapitre = Chapitre.create(hash)
+    chapitre = Chapitre.new(hash)
+    chapitre.save
     User.all.each do |user|
-      UserMailer.new_chapter(user, chapitre).deliver
+      UserMailer.new_chapter(user, chapitre.id).deliver
+      puts 'email sent to #{user.name}'
     end
   end
 end
