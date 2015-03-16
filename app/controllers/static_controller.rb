@@ -12,6 +12,6 @@ class StaticController < ApplicationController
   end
 
   def welcome
-    @chapitres = Chapitre.all
+    @chapitres = Chapitre.order("title")
   end
 end

@@ -15,5 +15,5 @@
 
 - if current_user
   %ul.breadcrumbs
-    - Chapitre.all.each do |chap|
-      %li=link_to(t("chap#{chap.id}"), chapitre_path(id: chap.id))
+    - Chapitre.order('title').each do |chap|
+      %li=link_to(chap.title.split(/-/).first, chapitre_path(id: chap.id))
