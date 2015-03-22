@@ -8,7 +8,7 @@ scheduler.at '2015-03-16 18:00:00' do
   Chapitre.create_and_mail(ary_chapitres[1])
 end
 
-scheduler.at '2015-03-23 05:00:00' do
+scheduler.at '2015-03-27 18:00:00' do
   Chapitre.create_and_mail(ary_chapitres[2])
 end
 
