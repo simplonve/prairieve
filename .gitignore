@@ -5,3 +5,4 @@
 /tmp
 /.env
 /public/assets/
+db/users_emails
