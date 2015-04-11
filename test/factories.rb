@@ -27,6 +27,11 @@ FactoryGirl.define do
     ressources {|ressources| [ressources.association(:ressource)]}
   end
 
+  factory :activite do
+    title "foo"
+    desc "bar"
+  end
+
   factory :user do
     password 'foo'
     password_confirmation 'foo'
