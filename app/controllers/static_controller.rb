@@ -2,6 +2,7 @@ class StaticController < ApplicationController
   include ApplicationHelper 
   skip_filter :authenticate_user, only: [:welcome]
   skip_filter :current_user, only: [:welcome]
+  before_action :require_admin, only: [:monitor, :stat]
 
   def stat
     @today_pie_chart = today_pie_chart_hash
@@ -30,5 +31,12 @@ class StaticController < ApplicationController
   private
   def activite_params
     params.require(:user).permit(:activites, :user_id)
+  end
+
+  def require_admin
+    unless current_user.admin?
+      flash[:error] = "Vous devez être un administrateur pour acceder à cette section"
+      redirect_to root_path
+    end
   end
 end

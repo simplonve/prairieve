@@ -1,0 +1,43 @@
+[
+    {
+        "chapitre" : "initial",
+        "title" : "efinitions Web",
+        "desc" : "Are you able to define the following : The Web",
+        "questions" : [
+            "UL",
+            "Doain",
+            "I Address",
+            "DS",
+            "HTP",
+            "HTPS",
+            "POP & IMAP & SMTP",
+            "AI",
+            "Wb Server",
+            "Bgs",
+            "Te Cloud",
+            "Cokies",
+            "44 Error",
+            "SO"
+        ]
+    },
+    {
+        "chapitre" : "integration",
+        "title":"Links",
+        "desc":"",
+        "questions": [
+            "How do you navigate the document tree with links (../../someotherpage)?",
+            "How do you open links in external windows?",
+            "What are all the possible pseudo-states (e.g. :hover) of a link and when are they actually activated? How do you change styles based on them?"
+        ]
+    },
+    {
+        "chapitre" : "integration",
+        "title":"Intermediate CSS",
+        "desc":"",
+        "questions": [
+            "How do you round corners of a box?",
+            "How do you add a shadow to a box?",
+            "How do you rotate an element a specified amount?"
+        ]
+    }
+]
