@@ -1,0 +1,12 @@
+- @users.each do |user|
+  .columns.medium-6
+    %h3= user.name
+    = form_for user, url: assign_path do |form|
+      = form.collection_select :activites, Activite.all, :id, :title
+      = form.hidden_field :user_id, { :value => user.id }
+      = form.submit 'Ajouter'
+  .columns.medium-6
+    %ul
+      - user.activites.each do |activite|
+        %li= activite.title
+  %hr

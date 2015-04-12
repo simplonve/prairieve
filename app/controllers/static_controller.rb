@@ -14,4 +14,21 @@ class StaticController < ApplicationController
   def welcome
     @chapitres = Chapitre.order("title")
   end
+
+  def monitor
+    @users = User.all
+    @activite = Activite.all
+  end
+
+  def assign
+    activite = Activite.find(activite_params[:activites])
+    @user = User.find(activite_params[:user_id])
+    @user.assign(activite) 
+    redirect_to monitor_path
+  end
+  
+  private
+  def activite_params
+    params.require(:user).permit(:activites, :user_id)
+  end
 end

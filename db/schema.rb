@@ -11,7 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150304095637) do
+ActiveRecord::Schema.define(version: 20150411204219) do
+
+  create_table "activites", force: true do |t|
+    t.string   "title"
+    t.string   "desc"
+    t.string   "chapitre"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "activites_users", id: false, force: true do |t|
+    t.integer "user_id",     null: false
+    t.integer "activite_id", null: false
+  end
+
+  add_index "activites_users", ["activite_id", "user_id"], name: "index_activites_users_on_activite_id_and_user_id"
+  add_index "activites_users", ["user_id", "activite_id"], name: "index_activites_users_on_user_id_and_activite_id"
 
   create_table "ahoy_events", id: false, force: true do |t|
     t.binary   "id"
@@ -33,6 +49,13 @@ ActiveRecord::Schema.define(version: 20150304095637) do
     t.datetime "updated_at"
     t.text     "desc"
   end
+
+  create_table "questions", force: true do |t|
+    t.string  "desc"
+    t.integer "activite_id"
+  end
+
+  add_index "questions", ["activite_id"], name: "index_questions_on_activite_id"
 
   create_table "ressources", force: true do |t|
     t.string   "title"
