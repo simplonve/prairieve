@@ -1,7 +1,17 @@
-%h2
-  = @user.name
-
-- if @user == current_user
-  = form_tag sessions_path, method: 'delete' do
-    = submit_tag t('.logout'), class: 'button'
-  = link_to t('.edit'), edit_user_path(current_user), class: 'button'
+.inline-list
+  %li
+    %h2 Tableau de bord
+  %li
+    = form_tag sessions_path, method: 'delete' do
+      = submit_tag t('.logout'), class: 'tiny button'
+  %li
+    = link_to t('.edit'), edit_user_path(current_user), class: 'tiny button'
+- @activites.each do |activite|
+  %h3= activite.title.capitalize
+  = form_for activite, url: root_path do |form|
+    - activite.questions.each do |qu|
+      = form.check_box :questions
+      = form.label :questions, qu.desc
+      %br
+    %br
+    = submit_tag "Valider", class: 'tiny button'
