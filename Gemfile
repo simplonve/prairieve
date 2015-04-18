@@ -21,7 +21,6 @@ gem 'activeuuid', '>= 0.5.0'
 gem 'chartkick'
 gem 'font-awesome-sass', '~> 4.2.0'
 gem 'haml'
-gem 'rufus-scheduler'
 
 group :development do
   gem 'webrick'
