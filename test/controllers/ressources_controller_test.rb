@@ -50,7 +50,7 @@ class RessourcesControllerTest < ActionController::TestCase
 
   test "line_chart" do
     get :show, id: @ressource.id, chapitre_id: @chapitre
-    midnight_today = (Time.now.midnight + 2.hours).to_i
+    midnight_today = Date.today.to_s
     assert_equal midnight_today, week_line_chart_hash.keys.first
   end
 end

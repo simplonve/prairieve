@@ -7,7 +7,6 @@ class Chapitre < ActiveRecord::Base
     chapitre.save
     User.all.each do |user|
       UserMailer.new_chapter(user, chapitre.id).deliver
-      puts 'email sent to #{user.name}'
     end
   end
 end
