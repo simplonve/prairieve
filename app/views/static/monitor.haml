@@ -1,12 +1,17 @@
 - @users.each do |user|
-  .columns.medium-6
-    %h3= user.name
+  %h3= user.name.capitalize
+  %ul
+    - user.activites.each do |activite|
+      %li
+        = activite.title
+        - activite.questions.each do |qu|
+          - if qu.already_valid(user)
+            = link_to "✔", root_path, title: qu.desc
+          - else
+            = link_to "✘", root_path, title: qu.desc
+    %br
     = form_for user, url: assign_path do |form|
       = form.collection_select :activites, Activite.all, :id, :title
       = form.hidden_field :user_id, { :value => user.id }
-      = form.submit 'Ajouter'
-  .columns.medium-6
-    %ul
-      - user.activites.each do |activite|
-        %li= activite.title
+      = form.submit 'Ajouter', class: "tiny button"
   %hr
