@@ -21,6 +21,7 @@ gem 'activeuuid', '>= 0.5.0'
 gem 'chartkick'
 gem 'font-awesome-sass', '~> 4.2.0'
 gem 'haml'
+gem 'pg'
 
 group :development do
   gem 'webrick'
@@ -30,7 +31,6 @@ group :development do
   gem 'rack-livereload'
   gem 'guard-bundler', require: false
   gem 'guard-rails'
-  gem 'sqlite3'
   gem 'pry'
 end
 
@@ -42,6 +42,5 @@ group :production do
   gem 'newrelic_rpm'
   gem 'puma'
   gem 'unicorn'
-  gem 'pg'
   gem 'rails_12factor', '0.0.2'
 end
