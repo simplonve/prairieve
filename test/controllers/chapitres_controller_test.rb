@@ -3,7 +3,7 @@ require 'test_helper'
 class ChapitresControllerTest < ActionController::TestCase
   def test_show
     chapitre = FactoryGirl.create(:chapitre)
-    user = FactoryGirl.create(:user)
+    user = FactoryGirl.create(:user, id: 1)
     session[:user_id] = user.id
 
     get :show, id: chapitre.id

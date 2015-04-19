@@ -23,14 +23,26 @@ class StaticController < ApplicationController
 
   def assign
     activite = Activite.find(activite_params[:activites])
-    @user = User.find(activite_params[:user_id])
-    @user.assign(activite) 
+    current_user.assign(activite) 
     redirect_to monitor_path
+  end
+
+  def validation
+    question = Question.find(valide_params[:question_id])
+    attr_valide = question.valide + current_user.id.to_s
+
+    question.valide = attr_valide
+    question.save!
+    redirect_to user_path(current_user.id)
   end
   
   private
   def activite_params
-    params.require(:user).permit(:activites, :user_id)
+    params.require(:user).permit(:activites)
+  end
+
+  def valide_params
+    params.require(:question).permit(:question_id)
   end
 
   def require_admin

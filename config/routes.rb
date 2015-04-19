@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get '/welcome', to: 'static#welcome'
   get '/monitor', to: 'static#monitor'
   patch '/assign', to: 'static#assign'
+  post '/validation', to: 'static#validation'
   get '/stat', to: 'static#stat'
 
   resource :sessions, only: [:create, :destroy]
