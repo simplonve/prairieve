@@ -32,6 +32,11 @@ FactoryGirl.define do
     desc "bar"
   end
 
+  factory :question do
+    desc "bar"
+    valide ""
+  end
+
   factory :user do
     password 'foo'
     password_confirmation 'foo'
