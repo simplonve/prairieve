@@ -42,9 +42,9 @@ class User < ActiveRecord::Base
   end
 
   def assign(activite)
-    unless self.activites.include?(activite)  
-      self.activites << activite
-    end
+    puts "Assign '#{activite.title}' to '#{self.name}'..."
+    self.activites << activite
+    puts 'Success !'
   end
 
   private
