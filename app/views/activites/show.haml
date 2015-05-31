@@ -1,0 +1,18 @@
+%h2 Les Activités liées à la formation
+
+%p Les activités sont composées d'une série de questions qui couvrent une large partie du programme de formation définit par Simplon.co et Labo.ve : développement web, programmation objet, expérience utilisateur.
+%p Tous les 15 jours, de nouvelles activités peuvent être débloquées durant l'entretien individuel avec le facilitateur.
+%p Les questions liés aux activités permetttent à chacun de valider sa compréhension de l'activité.
+%p 
+  Dans votre
+  =link_to "tableau de bord personnel", user_path(current_user)
+  vous pouvez valider une question en lien avec l'activité.
+%p.bold ATTENTION : Vous ne pouvez pas revenir en arrière, soyez sur de bien comprendre la question !
+
+%h2 Liste des activités
+%p Liste des activités proposées dans le cadre de l'autoévaluation de la formation Simplon.VE.
+
+.row
+  - @activites.each do |activite|
+    .columns.panel
+      %h3= activite.title
