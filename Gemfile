@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.1.4'
+ruby '2.2.2'
 
 gem 'rails', '4.1.1'
 gem 'sass-rails', '~> 4.0.3'
@@ -21,9 +21,9 @@ gem 'activeuuid', '>= 0.5.0'
 gem 'chartkick'
 gem 'font-awesome-sass', '~> 4.2.0'
 gem 'haml'
-gem 'pg'
 
 group :development do
+  gem 'sqlite3'
   gem 'webrick'
   gem 'spring'
   gem 'guard'
@@ -39,6 +39,7 @@ group :doc do
 end
   
 group :production do
+  gem 'pg'
   gem 'newrelic_rpm'
   gem 'puma'
   gem 'unicorn'
