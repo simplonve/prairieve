@@ -5,20 +5,21 @@
 #   gem 'sqlite3'
 #
 default: &default
-  adapter: postgresql
+  adapter: sqlite3
   host: localhost
   username: postgres
   password: <%= ENV['DATABASE_PASSWORD'] %>
 
 development:
   <<: *default
-  database: db/development
+  database: db/development.sqlite3
 
 test:
   <<: *default
-  database: db/test
+  database: db/test.sqlite3
 
 production:
+  adapter: postgresql
   pool: 10
   reaping_frequency: 10
   reconnect: true
