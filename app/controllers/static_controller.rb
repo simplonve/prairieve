@@ -22,7 +22,7 @@ class StaticController < ApplicationController
   end
 
   def assign
-    activite = Activite.find(activite_params[:activites])
+    activite = Activite.find(activite_params["activites"])
     user = User.find(activite_params[:user_id])
     user.assign(activite) 
     redirect_to monitor_path
