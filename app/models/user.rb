@@ -43,7 +43,7 @@ class User < ActiveRecord::Base
 
   def assign(activite)
     unless self.activites.include?(activite)  
-      self.activites << activite
+      self.activites.push activite
     end
   end
 

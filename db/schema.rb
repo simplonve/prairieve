@@ -26,9 +26,6 @@ ActiveRecord::Schema.define(version: 20150413202212) do
     t.integer "activite_id", null: false
   end
 
-  add_index "activites_users", ["activite_id", "user_id"], name: "index_activites_users_on_activite_id_and_user_id"
-  add_index "activites_users", ["user_id", "activite_id"], name: "index_activites_users_on_user_id_and_activite_id"
-
   create_table "ahoy_events", id: false, force: true do |t|
     t.binary   "id"
     t.binary   "visit_id"

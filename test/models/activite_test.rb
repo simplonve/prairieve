@@ -8,7 +8,7 @@ class ActiviteTest < ActiveSupport::TestCase
   test "assign activite to user" do
     activite = FactoryGirl.create(:activite)
     user = FactoryGirl.create(:user)
-    user.activites << activite
+    user.assign(activite)
     assert_equal user.activites.first.id, activite.id
   end
 end

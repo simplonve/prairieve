@@ -20,8 +20,8 @@ class StaticControllerTest < ActionController::TestCase
     user = FactoryGirl.create(:user)
     activite = FactoryGirl.create(:activite)
     session[:user_id] = user.id
-    patch :assign, activites: activite.id, user: {user_id: user.id}
-
+    #TOFIX :
+    patch :assign, activite: activite.id, user: {user_id: user.id}
     activite.reload
     assert user.activites.includes(activite)
   end
