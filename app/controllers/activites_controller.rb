@@ -2,13 +2,8 @@ class ActivitesController < ApplicationController
   skip_filter :authenticate_user, only: [:welcome]
   before_action :current_user, only: [:new, :create, :show]
   
-  def new
-  end
-
-  def create
-  end
-
-  def show
+  def index
+    @activites = Activite.all
   end
   
   private

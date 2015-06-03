@@ -1,0 +1,10 @@
+%ul
+  - @activites.each do |activite|
+    %li
+      %h3= activite.title 
+      %h4.subheader
+        = activite.desc 
+      %p
+        ex: 
+        = activite.questions.first.desc
+      %hr
