@@ -23,7 +23,8 @@ class StaticController < ApplicationController
 
   def assign
     activite = Activite.find(activite_params[:activites])
-    current_user.assign(activite) 
+    user = User.find(activite_params[:user_id])
+    user.assign(activite) 
     redirect_to monitor_path
   end
 
@@ -38,7 +39,7 @@ class StaticController < ApplicationController
   
   private
   def activite_params
-    params.require(:user).permit(:activites)
+    params.require(:user).permit(:activites, :user_id)
   end
 
   def valide_params

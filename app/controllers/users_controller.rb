@@ -14,7 +14,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @activites = @user.activites
+    @activites = current_user.activites
   end
 
   private
