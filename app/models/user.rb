@@ -4,7 +4,9 @@ class User < ActiveRecord::Base
   has_many :ressources
   validates :name, uniqueness: true, presence: true
   validates :email, uniqueness: true, presence: true
-  has_and_belongs_to_many :activites
+  
+  has_many :valides
+  has_many :activites, through: :valides
 
   def self.login(email, password)
     user = User.find_by(email: email.downcase)
