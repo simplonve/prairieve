@@ -16,16 +16,6 @@ class StaticControllerTest < ActionController::TestCase
     assert :success
   end
 
-  def test_assign
-    user = FactoryGirl.create(:user)
-    activite = FactoryGirl.create(:activite)
-    session[:user_id] = user.id
-    #TOFIX :
-    patch :assign, activite: activite.id, user: {user_id: user.id}
-    activite.reload
-    assert user.activites.includes(activite)
-  end
-
   def test_validation
     user = FactoryGirl.create(:user)
     session[:user_id] = user.id

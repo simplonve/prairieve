@@ -6,21 +6,29 @@
       = submit_tag t('.logout'), class: 'tiny button'
   %li
     = link_to t('.edit'), edit_user_path(current_user), class: 'tiny button'
+.panel
+  %h4
+    %a{:name => "menu"} Aller à
+  %ul
+    - @activites.each do |activite|
+      %li= link_to "#{activite.title.capitalize}", "#activite#{activite.id}"
+
 - @activites.each do |activite|
-  %hr
-  Chapitre
-  .label
-    = activite.chapitre.capitalize
+  %a{:name => "activite#{activite.id}"}= activite.chapitre.capitalize
   %h3= activite.title.capitalize
   %p= activite.desc
   - activite.questions.each do |qu|
     = form_for :question, url: validation_path do |form|
-      .row
-        = form.hidden_field :question_id, {value: qu.id}
-        .columns.small-1
-          - if qu.already_valid(current_user)
-            .success.tiny.button ✔
-          - else
-            = submit_tag "✘", class: 'alert tiny button' 
-        .columns.small-11
-          = form.label :question_id, qu.desc
+      .columns.medium-6
+        .row
+          = form.hidden_field :question_id, {value: qu.id}
+          .columns.small-2
+            - if qu.already_valid(current_user)
+              .button.tiny.success ✔
+            - else
+              = submit_tag "✘", class: 'alert button tiny' 
+          .columns.small-10
+            = form.label :question_id, qu.desc
+  .columns
+    %p= link_to "Retour au menu", "#menu"
+  %hr

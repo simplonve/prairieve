@@ -43,12 +43,6 @@ class User < ActiveRecord::Base
     save_and_reset_password(email)
   end
 
-  def assign(activite)
-    unless self.activites.include?(activite)  
-      self.activites.push activite
-    end
-  end
-
   private
   def self.generate_password
     chars = [*('a'..'z'),*('A'..'Z'), *('0'..'9')]

@@ -1,24 +1,20 @@
 %h1 Liste des activités
-
 %p 
-  Voici la liste des activités définies dans le cadre de la formation. Les activités balayent une série de question en lien avec le cursus. Ces questions permettent aux Zar'Dev d'avoir vision sur le parcours accompli et une auto-évaluation individuelle.
-  Lors de chaque entretien individuel, une série d'activité pourra être débloquée en commun accord avec le facilitateur. Le tableau de bord répertorie chaque question lié à une activité, chaque question peut ensuite validée.
-
+  Voici la liste des activités définies dans le cadre de la formation. Les activités balayent une série de question (plus de 250) qui rentre en détail dans le cursus de formation de Simplon.VE. 
+  Ces questions permettent aux Zar'Dev d'avoir un socle large de connaissance pour construire son apprentissage. 
+  Elle propose aussi une visibilité sur le parcours accompli, ainsi qu'une auto-évaluation individuelle. 
+%h3 Comment aborder chaque question
+%p
+  Ces questions sont assez généralistes pour laisser le choix dans la réponse. Pour y répondre, tapez les mot-clés dans un moteur de recherche, et lisez un article à ce propos. Vous apprendrez beaucoup du contexte de lecture plus qu'une réponse basique, en 1 phrase, à question posée, c'est la sérendipité. 
 %hr
 %h3 Explication par des "user stories"
-%ul
-  %li
-    En tant que facilitateur, je peux sélectionner une activité pour un Zar'dev, afin de débloquer une série de questions dans le tableau de bord du Zar'Dev.
-  %li
-    En tant que Zar'dev, je peux valider une question issue d'une activité, afin de savoir où j'en suis dans la formation. 
+%p En tant que Zar'dev, je peux valider une question issue d'une activité, afin de savoir où j'en suis dans la formation. 
 %hr
-%h3 Activités disponibles
-%ul
-  - @activites.each do |activite|
-    %li
-      %h4= activite.title 
-      %h4.subheader= activite.desc 
-      %p
-        ex: 
-        = activite.questions.first.desc if activite.questions.present?
-      %hr
+%h1 Activités disponibles
+- @activites.each do |activite|
+  %h4= activite.title 
+  %h4.subheader= activite.desc 
+  %p
+    ex: 
+    = activite.questions.last.desc if activite.questions.present?
+  %hr

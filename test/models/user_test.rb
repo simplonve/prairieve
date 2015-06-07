@@ -48,11 +48,4 @@ class UserTest < ActiveSupport::TestCase
     user = User.find_by(email: 'an@email.net')
     assert_not_nil user.reset_password_key
   end
-
-  test "assign activite to user" do
-    user = FactoryGirl.create(:user)
-    activite = FactoryGirl.create(:activite)
-    user.assign(activite)
-    assert_not_nil user.activites.include?(activite)
-  end
 end
