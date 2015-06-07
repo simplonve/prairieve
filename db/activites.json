@@ -79,7 +79,7 @@
             "Qu'est-ce que l'Internet ?",
             "Comment l'information est-elle découpée (mise en morceaux) puis envoyée ?",
             "Qu'est-ce qu'un paquet ?",
-            "Qu'est-ce qu'un 'client'?",
+            "Qu'est-ce qu'un 'client' ?",
             "Qu'est-ce qu'un 'serveur' ?",
             "Qu'est-ce que le HTTP ?",
             "Citez 3 types de requêtes HTTP ?",
@@ -107,9 +107,9 @@
             "En quoi les permissions sont-elles si importantes ?",
             "Comment changer les permissions d'un fichier pour qu'il soit modifiable uniquement pour l'utilisateur et le superutilisateur (plusieurs réponses possible) ?",
             "Comment voir les fichiers cachés d'un dossier ?",
-            "Comment trouver une information sur une commande (sans chercher sur internet)?",
-            "Qu'est-ce qu'un 'superutilisateur'?",
-            "Quelle commande permet d'utiliser le superutilisateur?"
+            "Comment trouver une information sur une commande (sans chercher sur internet) ?",
+            "Qu'est-ce qu'un 'superutilisateur' ?",
+            "Quelle commande permet d'utiliser le superutilisateur ?"
         ]
     },
     {
@@ -117,11 +117,11 @@
         "title":"Editeur de texte",
         "desc":" Linux Command Line",
         "questions": [
-            "Qu'est-ce que Vim?",
-            "Hormis, quel est l'(autre) éditeur de texte professionnel qui s'ouvre aussi dans le terminal ?",
+            "Qu'est-ce que Vim ?",
+            "Hormis vim, quel est l'(autre) éditeur de texte professionnel qui s'ouvre aussi dans le terminal ?",
             "Comment quitter Vim si un autre utilisateur vous laisse une machine avec Vim ouvert dans le terminal ?",
-            "Pourquoi Sublime Text est plus facile à manipuler que Vim pour un néophyte?",
-            "Citez 2 raccourcis claviers de Sublime Text qui vous semblent indispensables ?",
+            "Pourquoi Sublime Text est plus facile à manipuler que Vim pour un débutant ?",
+            "Citez 3 raccourcis claviers de Sublime Text qui vous semblent indispensables ?",
             "Citez 2 'packages' Sublime Text qui vous semblent indispensables ?",
             "En quoi la selection multiligne est-elle si puissante dans Sublime Text ?",
             "Comment ouvrir un fichier dans Sublime Text sans passer ni par Ctrl+O, ni bien l'arborescence sur la droite ?",
@@ -149,16 +149,16 @@
         "title":"HTML Basique",
         "desc":"",
         "questions": [
-            "Comment est structuré un document HTML?",
-            "Que sont les balises, les éléments, les tags?",
+            "Comment est structuré un document HTML ?",
+            "Que sont les balises, les éléments, les tags ?",
             "Qu'est-ce qu'un attribut ?",
             "Comment créer un lien vers un autre fichier ?",
-            "Dans quel cas utiliser les IDs ou les Classes?",
+            "Dans quel cas utiliser les IDs ou les Classes ?",
             "Quels sont les attributs nécéssaires à l'affichage d'une image ?",
             "Quels sont les attributs nécéssaires à l'affichage d'un lien ?",
             "Citez au moins 3 'endroits' ou peuent être écrit vos règles CSS ?",
             "Selon les règles de bonnes pratiques, où doivent être écrits vos règles CSS ?",
-            "Qu'est-ce que le 'container <div>'?",
+            "Qu'est-ce que le 'container <div>' ?",
             "Quels balises/éléments sont utlisés pour créer des listes ?",
             "Comment imbriquer (nest) des listes entre elles ?",
             "Quelle est la différence entre <ol> & <ul> ?",
@@ -173,19 +173,19 @@
         "title":"CSS Basique",
         "desc":"",
         "questions": [
-            "Que sont les selecteurs (selectors) en CSS ?",
+            "Que sont les selecteurs en CSS ?",
             "En règle générale, comment doit-on cibler les balises/éléments grace aux sélecteurs CSS ?",
             "Quelle est la différence entre %, em & rem qui spécifie les tailles en CSS ?",
-            "Comment sélectionner un élément/balise dans un autre élément/balise en CSS?",
+            "Comment sélectionner un élément/balise dans un autre élément/balise en CSS ?",
             "Comment cibler un élément/balise enfant (child élément) dans un CSS ?",
             "Comment cibler une classe dans une classe ?",
             "Comment cibler une classe dans une ID ?",
-            "Comment cibleriez-vous en CSS l'exemple suivant : 'tous les liens | d'un élément li qui ont une classe appelée 'axes' | situé dans une liste ordonnée | qui elle-meme à une id appelée 'tools-listing'?",
+            "Comment cibleriez-vous en CSS l'exemple suivant : 'tous les liens | d'un élément li qui ont une classe appelée 'axes' | situé dans une liste ordonnée | qui elle-meme à une id appelée 'tools-listing' ?",
             "Comment peut-on importer des feuilles de style externes dans un fichier HTML ?",
             "Comment peut-on importer des feuilles de style externes dans un fichier CSS ?",
             "Qu'est-ce qu'un feuille de style par défaut du navigateur, comment peut-on écraser ces règles par défaut ?",
             "Qu'est-ce qu'un fichier 'CSS Reset' & en quoi est-il si utile au développeur ?",
-            "Quelle est la feuille de style prioritaire (qui écrase les autres) lorsque l'on en importe plusieurs dans un fichier HTML ?",
+            "Quelle est la feuille de style prioritaire (qui écrase les autres) lorsque l'on en importe plusieurs fichier CSS dans un fichier HTML ?",
             "Quel est l'ordre des priorité des sélecteurs ? ex. si vous spécifiez que <body> a une 'color: black' mais que <h1> est 'blue' mais que la classe 'main-title' est 'red', quelle couleur sera utilisée par <body style='color:yellow'><h1 class='main-title' style='color:green'>Howdy!</h1><body> ?"
         ]
     },
@@ -194,13 +194,13 @@
         "title":"La Box en CSS",
         "desc":"",
         "questions": [
-            "Quelle est la différence entre margin & padding?",
-            "Comment les 'borders' affecte la taille d'une box?",
-            "Comment les 'margins' peuvent etre utilisé pour centrer un élément horizontal sur une page?",
+            "Quelle est la différence entre margin & padding ?",
+            "Comment les 'borders' affectent-elles la taille d'une box ?",
+            "Comment les 'margins' peuvent être utilisé pour centrer un élément horizontal sur une page ?",
             "Qu'entend-t-on par 'margins are collapsed' ?",
-            "Quelle est la difference entre 'block', 'inline-block' & 'inline' ?",
+            "Quelle est la différence entre 'block', 'inline-block' & 'inline' ?",
             "A quel moment est-il requis de spécifier la largeur ('width') d'un élément (alors que l'on pourrait laisser le navigateur définir cette largeur automatiquement) ?",
-            "Dans les outils du développeur inclus dans le navigateur, où peut-on vérifier les modèles box (avec un schéma explicite)?"
+            "Dans les outils du développeur inclus dans le navigateur, où peut-on vérifier les modèles box (avec un schéma explicite) ?"
         ]
     },
     {
@@ -208,12 +208,12 @@
         "title":"Positioning en CSS",
         "desc":"",
         "questions": [
-            "Qu'est-ce que le DOM?",
-            "Comment se place les éléments dans le DOM par défaut ?",
-            "Quand peut-on utiliser les atributs 'top left bottom right' ?",
-            "Quelle est la différence entre float & position?",
-            "Quel élément se comporte comme un 'parent' d'un élément float?",
-            "Quelle est la différence entre floating right & floating left?",
+            "Qu'est-ce que le DOM ?",
+            "Comment se placent les éléments dans le DOM par défaut ?",
+            "Quand peut-on utiliser les attributs 'top left bottom right' ?",
+            "Quelle est la différence entre float & position ?",
+            "Quel élément se comporte comme un 'parent' d'un élément float ?",
+            "Quelle est la différence entre floating right & floating left ?",
             "Si plusieurs éléments sont 'floatés' les uns à coté des autres et que vous réduisez la largeur de votre navigateur, que se passe-t-il ?",
             "Quelle est la différence entre un positionement 'relative' & 'absolute' ?",
             "Quel élément se comporte comme un 'parent' d'un élément 'relative' ou 'absolute' ?",
@@ -225,16 +225,16 @@
         "title":"Formulaires",
         "desc":"",
         "questions": [
-            "En quoi les formulaires sont peut-etre la partie la plus importante de votre site web ?",
+            "En quoi les formulaires sont peut-être la partie la plus importante de votre site web ?",
             "Comment construire un formulaire basique ?",
             "Comment doit-on spécifier la cible (path) vers laquelle le formulaire sera soumis ?",
             "Quand devez-vous soumettre un formulaire avec une méthode GET ou POST ?",
-            "What are all the possible form élément types?",
-            "When should you use check boxes instead of radio buttons?",
-            "When should you use a combobox/dropdown instead of a text field?",
+            "Quels sont les éléments types applicable à une balise 'form' (method, value) ?",
+            "Quand utiliser une checkbox plutot qu'un radio buttons ?",
+            "Quand utiliser un combobox/dropdown plutot qu'un textfield ?",
             "Comment créer un 'très grand' textfield ?",
-            "Comment lier les éléments à leurs labels?",
-            "Que devrait-on afficher dans le bouton 'submit' au lieu de 'submit'?"
+            "Comment lier les éléments à leurs labels ?",
+            "Que devrait-on afficher dans le bouton 'submit' au lieu de 'submit' ?"
         ]
     },
     {
@@ -243,14 +243,14 @@
         "desc":"",
         "questions": [
             "Quels sont les attributs habituels d'un élément image ?",
-            "Comment charger un version plus petite d'une image ?",
+            "Comment charger une version plus petite d'une image ?",
             "Comment faire en sorte qu'une image remplisse entièrement un élément ?",
-            "En quoi stocker les images sur son serveur est-elle une meilleure solution que les héberger en ligne ?",
-            "Quels sont les principaux formats d'image & comment sont-ils differents ?",
-            "Quel type de fichier image autorise les animations?",
+            "En quoi stocker les images sur son serveur est-elle une meilleure solution que de les appeler depuis un autre serveur ?",
+            "Quels sont les principaux formats d'image & comment sont-ils différents ?",
+            "Quel type de fichier image autorise les animations ?",
             "Quel type de fichier image autorise la transparence ?",
-            "Quel type de fichier image autorise la transparence des couleurs?",
-            "Quel type de fichier image est meilleur pour les photos? Les graphiques?",
+            "Quel type de fichier image autorise la transparence des couleurs ?",
+            "Quel type de fichier image est meilleur pour les photos? Pour les infographies ?",
             "Quel type de fichier image permet de déterminer sa taille sans affecter sa qualité ? Pourquoi ?"
         ]
     },
@@ -259,9 +259,9 @@
         "title":"Links",
         "desc":"",
         "questions": [
-            "Comment appeler un lien en navigant dans l'arborescence de fichiers (../../uneautrepage)?",
-            "Comment ouvrir un lien dans un autre fenêtre?",
-            "Quels sont tous les pseudo-états (ex :hover) d'un lien & quand s'activent ses pseudo-états?"
+            "Comment appeler un lien en navigant dans l'arborescence de fichiers (../../uneautrepage) ?",
+            "Comment créer un lien qui s'ouvre dans une autre fenêtre ?",
+            "Quels sont tous les pseudo-états (ex :hover) d'un lien & quand s'activent ses pseudo-états ?"
         ]
     },
     {
@@ -269,8 +269,8 @@
         "title":"Intermediate CSS",
         "desc":"",
         "questions": [
-            "Comment arrondir les coins d'une box?",
-            "Comment ajouter une ombre à une box?",
+            "Comment arrondir les coins d'une box ?",
+            "Comment ajouter une ombre à une box ?",
             "Comment opérer une rotation sur un élément ?"
         ]
     },
@@ -279,10 +279,10 @@
         "title":"User Experience",
         "desc":"",
         "questions": [
-            "Qu'est-ce que l'expérience utilisateur - UX?",
-            "En quoi l'UX est-elle différente de UI?",
+            "Qu'est-ce que l'expérience utilisateur - UX ?",
+            "En quoi l'UX est-elle différente de UI ?",
             "En quoi l'UI est-elle différente de l'interaction ?",
-            "Citez 3 facteurs clés qui déterminent et mesurent une bonne UX?",
+            "Citez 3 facteurs clés qui déterminent et mesurent une bonne UX ?",
             "Quels sont les principaux outils d'un designer d'UX ?",
             "Qu'est ce qu'une personna en UX ?"
         ]
@@ -297,7 +297,7 @@
             "Comment pouvez-vous vérifier si vous avez fait les bons choix d'architecture, grâce à l'observation des comportements utlisateurs ?",
             "Citez 3 habitudes de navigation chez un utlisateur ?",
             "Quelles sont les 2 questions auxquelles vous devez répondre (à l'utilisateur) pour garantir une bonne navigation ?",
-            "Qu'est-ce que le 'call to action'?",
+            "Qu'est-ce que le 'call to action' ?",
             "Combien faut-il de 'call to action' sur une page classique ?",
             "Citez 10 point qui détermine un bon design d'interaction ?"    
             ]
@@ -307,12 +307,12 @@
         "title":"Design",
         "desc":"",
         "questions": [
-            "Citez au moins 5 des 10 principes d'un bon design selon Dieter Rams?",
-            "En quoi est-il pertinent d'utiliser des mises en page classiques (common layouts) dans la composition de votre site?",
-            "Quel habitudes vos yeux suivent sur une page web ?",
-            "Pourquoi les espaces blancs sont-ils si importants?",
-            "Qu'est-ce que la hierarchie visuelle & en quoi est-ce si important pour un site web?",
-            "Quels sont les facteurs dit 'CRAP'?"
+            "Citez au moins 5 des 10 principes d'un bon design selon Dieter Rams ?",
+            "En quoi est-il pertinent d'utiliser des mises en page classiques (common layouts) dans la composition de votre site ?",
+            "Quel habitudes vos yeux doivent suivre sur une page web ?",
+            "Pourquoi les espaces blancs sont-ils si importants ?",
+            "Qu'est-ce que la hierarchie visuelle & en quoi est-ce si important pour un site web ?",
+            "Quels sont les facteurs dit 'CRAP' ?"
             ]
     },
     {
@@ -320,9 +320,11 @@
         "title":"Typographie - Fonts",
         "desc":"",
         "questions": [
-            "Quels sont les formats de typographie couramment utilisé en développement web ?",
-            "Qu'est-ce que le serif & le sans serif & Dans quel cas utiliser l'un ou l'autre (en général) ?",
-            "Combien de typographie utliser sur une page web classique ?",
+            "Quels sont les formats de typographie couramment utilisés en développement web ?",
+            "Qu'est-ce que le serif & le sans serif ?",
+            "Qu'est-ce que le sans serif ?",
+            "Dans quel cas utiliser le serif plutot que le sans ?",
+            "Combien de typographie devrait-on utliser sur une page web classique ?",
             "Quelle nuance de noir utiliser pour un texte sur fond blanc/clair ?",
             "Quel est la hauteur de ligne optimale pour une largeur de texte d'environ 80 caracteres ?"
             ]
@@ -332,12 +334,12 @@
         "title":"Grids",
         "desc":"",
         "questions": [
-            "Qu'est-ce que le grid system?",
-            "Pourquoi les grids sont-elles si utiles?",
+            "Qu'est-ce que le grid system ?",
+            "Pourquoi les grids sont-elles si utiles ?",
             "Quel est l'inconvénient principal des grids ?",
             "Quel est l'inconvénient principal des frameworks type Bootstrap contenant un système de grid ?",
             "En quoi le 'flex' en CSS est-il capable de détroner les grids ?",
-            "Citez deux technologies de grid connues aujourd'hui?"
+            "Citez deux technologies de grid connues aujourd'hui ?"
         ]
     },
     {
@@ -346,14 +348,15 @@
         "desc":"",
         "questions": [
             "Qu'est-ce qu'une couleur primaire, secondaire, & tertiaire & comment se marient-elles ?",
-            "Citez quelques sites permettant de trouver de bons 'color schemes' ?",
+            "Citez quelques sites permettant de trouver de bons 'schémas de couleurs' ?",
             "En quoi le constraste typographie / arrière plan est-il si important dans l'ergonomie ?",
             "Comment respecter les contraites d'accessibilité web pour mal-voyant ?",
+            "Comment respecter les contraites d'accessibilité web pour daltoniens ?",
             "Comment peut-on alterner couleurs chaudes et froides dans la composition d'un site web ?",
             "Pourquoi devrait-on intégrer les photos d'arrière plan de manière définitive avant de construire une page web ?",
-            "Qu'est-ce que le RGB?",
-            "Qu'est-ce que le Hexadecimal?",
-            "Comment déterminer de quel couleur est un code hex?"
+            "Qu'est-ce que le RGB ?",
+            "Qu'est-ce que le Hexadecimal ?",
+            "Comment déterminer de quel couleur est un code hex ?"
         ]
     },
     {
@@ -361,7 +364,7 @@
         "title":"Mockups",
         "desc":"",
         "questions": [
-            "Qu'est-ce qu'un mockup?",
+            "Qu'est-ce qu'un mockup ?",
             "En quoi, techniquement, un 'mockup' est-il différent d'un 'wireframe' ou d'un prototype ?",
             "Jusque quand peut-on parler de fidélité d'un mockup ?",
             "Pourquoi Balsamiq est-il si utile pour démarcher un client ?"
@@ -372,13 +375,13 @@
         "title":"Les Principes du Développement Logiciel",
         "desc":"Developpement Logiciel",
         "questions": [
-            "En quoi peut-on dire que les année 1990 ont été une grande avancée dans la programmation informatique ?",
-            "En quoi un développeur logicielse rapproche plus du métier d'architecte que de celui de maçon?",
+            "En quoi peut-on dire que les années 1990 ont été une grande avancée dans la programmation informatique ?",
+            "En quoi le métier de développeur logiciel se rapproche plus du métier d'architecte que de celui de maçon ?",
             "En quoi peut-on rapprocher le métier de développeur logiciel de celui de designer UX ?",
-            "Pourquoi est-il si important pour les développeur de penserà l'utilisateur ?",
+            "Pourquoi est-il si important pour les développeurs de penser à l'utilisateur final ?",
             "Pouvez-vous trouver 4 photos de la vrai vie qui montre un produit mal conçu et expliquer pourquoi ?",
-            "Pourquoi les ingénieurs en général adorent le principe KISS?",
-            "En quoi le principe DRY est-il sensé à vos yeux?",
+            "Pourquoi les ingénieurs en général adorent le principe KISS ?",
+            "En quoi le principe DRY est-il sensé à vos yeux ?",
             "Pouvez-vous expliquer le principe YAGNI ?",
             "Quels sont pour vous les 3 principes les plus importants du développement logiciel ?"
         ]
@@ -388,19 +391,19 @@
         "title":"Introduction au Développement Agile",
         "desc":"Agile Way",
         "questions": [
-            "Qu'est-ce que le dévelopment en cascade?",
-            "En quoi le Waterfall peut apparaitre comme LA solution pour résoudre les problèmes du développement logiciel ?",
-            "Dans quel domaine le Waterfall est-il bon ?",
-            "Dans quel domaine le Waterfall n'est pas bon du tout ?",
+            "Qu'est-ce que le développement en cascade ?",
+            "En quoi le développement en cascade peut apparaitre comme LA solution pour résoudre les problèmes du développement logiciel ?",
+            "Dans quel domaine le développement en cascade est-il bon ?",
+            "Dans quel domaine le développement en cascade n'est pas bon du tout ?",
             "Qu'est-ce que la méthode de développement Agile ?",
             "Quels sont les avantages de l'agilité ?",
             "Quels sont les inconvénients de l'agilité ?",
-            "Qu'est-ce que l'eXtreme Programming?",
+            "Qu'est-ce que l'eXtreme Programming ?",
             "Quelles techniques l'XP met-il en avant ?",
-            "Qu'est-ce que le SCRUM?",
-            "Quels sont les grand principaes de l'XP & du SCRUM?",
-            "Qu'est qu'une User Story?",
-            "Quel est le format classique d'une user story ?"
+            "Qu'est-ce que le SCRUM ?",
+            "Quels sont les grand principaes de l'XP & du SCRUM ?",
+            "Qu'est qu'une User Story ?",
+            "En quoi le format A5 est-il le plus pertinent pour décrire une user story (et non juste une phrase) ?"
         ]
     },
     {
@@ -415,7 +418,7 @@
             "Qu'est-ce qu'un test unitaire ?",
             "Qu'est-ce qu'un test d'integration ?",
             "Qu'est-ce qu'un test d'acceptation ?",
-            "Quels sont les comportements généraux à tester en programmation?"
+            "Quels sont les comportements généraux à tester en programmation ?"
         ]
     },
     {
@@ -439,13 +442,13 @@
             "En quoi le pseudocoding est-il si utile pour un développeur débutant ?",
             "En quoi le pseudocoding est-il si utile pour un développeur avancé ?",
             "Pourquoi dit-on que le code suit une séquence d'instructions ?",
-            "Qu'est-ce que l'itération ?",
+            "Qu'est-ce qu'une itération ?",
             "Qu'est-ce qu'une Interface ?",
             "Comment appliquer des 'modules' au pseudocode ?",
-            "Qu'est-ce que le SOA?",
+            "Qu'est-ce que le SOA (en anglais) ?",
             "Qu'est-ce que la cohesion en développement logiciel ?",
             "Qu'est-ce que l'encapsulation en développement logiciel ?",
-            "Quels sont les principes SOLID ?",
+            "Quels sont les principes SOLID (en anglais) ?",
             "Qu'est-ce que SOLID veut dire ?"
         ]
     },
@@ -454,15 +457,15 @@
         "title":"Git basique",
         "desc":"Les régles de bases à comprendre pour utiliser git",
         "questions": [
-            "Qu'est-ce que Git?",
-            "Que veut dire l'acronyme SCM (en anglais)?",
-            "Qu'est-ce qu'un logiciel de controle de version?",
-            "En quoi Git est-il utile pour un développeur?",
-            "En quoi Git est-il utile pour une équipe de développeur?",
-            "Comment créer un nouveau repository Git pour un noueau projet en local?",
-            "Comment en créer un sur Github?",
-            "Comment commiter les changements?",
-            "Quelle est la différence entre 'staging' & 'commit' ses changements ?"
+            "Qu'est-ce que Git ?",
+            "Que veut dire l'acronyme SCM (en anglais) ?",
+            "Qu'est-ce qu'un logiciel de controle de version ?",
+            "En quoi Git est-il utile pour un développeur ?",
+            "En quoi Git est-il utile pour une équipe de développeur ?",
+            "Comment créer un nouveau repository Git pour un noueau projet en local ?",
+            "Comment en créer un sur Github ?",
+            "Comment commiter les changements ?",
+            "Quelle est la différence entre 'stager' & 'committer' ses changements ?"
         ]
     },
     {
@@ -470,12 +473,12 @@
         "title":"Remotes",
         "desc":"Comprendre les remotes et la connection de git avec Github (ou autres sites web similaires)",
         "questions": [
-            "Quelle est la différence entre commiter (commit) ses changements et les pousser (push) sur Github?",
-            "Quelle est la différence entre une 'remote' & votre repo local?",
-            "Comment pouvez-vous votre repo Github en tant que remote?",
-            "Comment pouvez-vous vérifier que le status de votre repo dans git?",
-            "Comment pouvez-vous voir l'historique de vos commits précédents (depuis la ligne de commande)?",
-            "Comment pouvez-vous naviguer dans vos commits sur le site web Github?"
+            "Quelle est la différence entre commiter (commit) ses changements et les pousser (push) sur Github ?",
+            "Quelle est la différence entre une 'remote' & votre repo local ?",
+            "Comment pouvez-vous voir l'adresse de destination d'une remote ?",
+            "Comment pouvez-vous vérifier que le status de votre repo dans git ?",
+            "Comment pouvez-vous voir l'historique de vos commits précédents (depuis la ligne de commande) ?",
+            "Comment pouvez-vous naviguer dans vos commits sur le site web Github ?"
         ]
     },
     {
@@ -483,16 +486,16 @@
         "title":"Branching & Merging",
         "desc":"Comment créer et gérer des branches dans git",
         "questions": [
-            "Qu'est-ce qu'un 'Merge'?",
-            "Qu'est-ce qu'une 'Pull Request'?",
-            "Qu'est-ce qu'un 'Forking' de repo?",
-            "Qu'est-ce qu'un 'Cloning' de repo?",
-            "Qu'est-ce qu'un 'Branching'?",
-            "Pourquoi utiliser les branches?",
-            "Comment créer une nouvelle branche?",
+            "Qu'est-ce qu'un 'Merge' ?",
+            "Qu'est-ce qu'une 'Pull Request' ?",
+            "Qu'est-ce qu'un 'Fork' de repo ?",
+            "Qu'est-ce qu'un 'Clone' de repo ?",
+            "Qu'est-ce qu'une 'Branch' ?",
+            "Pourquoi utiliser les branches ?",
+            "Comment créer une nouvelle branche ?",
             "Comment merger deux branches ?",
-            "Qu'est-ce qu'un 'Merge Conflict' & quand ce arrive-t-il?",
-            "Comment résoudre a 'Merge Conflict'?"
+            "Qu'est-ce qu'un 'Merge Conflict' & quand ce arrive-t-il ?",
+            "Comment résoudre a 'Merge Conflict' ?"
         ]
     },
     {
@@ -503,15 +506,15 @@
             "En quoi peut-on dire que Ruby encourage le bonheur des développeurs ?",
             "Qu'est-ce qu'un langage interpreté ?",
             "Qu'est-ce qu'un langage compilé ?",
-            "Qu'est-ce que l'IRB?",
+            "Qu'est-ce que l'IRB et a quoi sert-il ?",
             "Que sont les Objects ?",
             "Que sont les Methods ?",
             "Que sont les Classes ?",
             "Que sont les Blocks ?",
             "Qu'est-ce qu'un liste ?",
-            "Qu'est-ce qu'un Iterator ?",
+            "Qu'est-ce qu'un iterateur ?",
             "Qu'est-ce qu'un hash ?",
-            "Qu'est-ce qu'une librairie ?",
+            "Qu'est-ce qu'une méthode 'énumérable' ?",
             "Qu'est-ce qu'une gem ?"
         ]
     },
@@ -520,12 +523,12 @@
         "title":"Ruby Numbers, Operators & Expressions",
         "desc":"Les chiffres en Ruby",
         "questions": [
-            "Quelle est la différence entre un Integer & un Float?",
-            "Quelle est la différence entre =, == et ===?",
+            "Quelle est la différence entre un Integer & un Float ?",
+            "Quelle est la différence entre =, == et === ?",
             "Qu'est-ce qu'un 'range' ?",
             "Comment créer un 'range' ?",
-            "Quelle est la différence entre (1..3) & (1...3)?",
-            "Quels sont les 3 méthodes pour créer un range?"
+            "Quelle est la différence entre (1..3) & (1...3) ?",
+            "Quels sont les 3 méthodes pour créer un range ?"
         ]
     },
     {
@@ -533,17 +536,17 @@
         "title":"Ruby Strings",
         "desc":"Les chaines de caractères dans Ruby",
         "questions": [
-            "Quelle est la différence entre une simple quote (apostrophe) & une double quotes (guillemet)?",
-            "Qu'est-ce que interpolation de string ?",
-            "Que sont les caractères d'échapement (escape characters)?",
-            "Quel caractères utiliser pour écrire des retours à la ligne (line breaks)?",
-            "Comment pouvez-vous transformer d'autres chose en Strings ?",
-            "Comment pouvez-vous concatenater des strings?",
-            "Comment pouvez-vous casser (split up) des strings en une liste (liste)?",
-            "En quoi une string peut etre similaire à une liste?",
-            "Qu'entend-t-on par le fait qu'une string peut être 'mutable' & pourquoi s'en soucier?",
-            "Qu'est-ce qu'un symbole en ruby?",
-            "En quoi un symbole est-il different d'une string?"
+            "Quelle est la différence entre une simple quote (apostrophe) & une double quotes (guillemet) ?",
+            "Qu'est-ce que l'interpolation de string ?",
+            "Que sont les caractères d'échapement (escape characters) ?",
+            "Quel caractères utiliser pour écrire des retours à la ligne (line breaks) ?",
+            "Comment pouvez-vous transformer d'autres chose en String ?",
+            "Comment pouvez-vous concatenater des strings ?",
+            "Quelle méthode permet de casser (split up) des strings en une liste (liste) ?",
+            "En quoi une string peut être similaire à une liste ?",
+            "Qu'entend-t-on par le fait qu'une string peut être 'mutable' & pourquoi s'en soucier ?",
+            "Qu'est-ce qu'un symbole en ruby ?",
+            "En quoi un symbole est-il différent d'une string ?"
         ]
     }
 ]
