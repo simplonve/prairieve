@@ -1,0 +1,24 @@
+%h1 Liste des activités
+
+%p 
+  Voici la liste des activités définies dans le cadre de la formation. Les activités balayent une série de question en lien avec le cursus. Ces questions permettent aux Zar'Dev d'avoir vision sur le parcours accompli et une auto-évaluation individuelle.
+  Lors de chaque entretien individuel, une série d'activité pourra être débloquée en commun accord avec le facilitateur. Le tableau de bord répertorie chaque question lié à une activité, chaque question peut ensuite validée.
+
+%hr
+%h3 Explication par des "user stories"
+%ul
+  %li
+    En tant que facilitateur, je peux sélectionner une activité pour un Zar'dev, afin de débloquer une série de questions dans le tableau de bord du Zar'Dev.
+  %li
+    En tant que Zar'dev, je peux valider une question issue d'une activité, afin de savoir où j'en suis dans la formation. 
+%hr
+%h3 Activités disponibles
+%ul
+  - @activites.each do |activite|
+    %li
+      %h4= activite.title 
+      %h4.subheader= activite.desc 
+      %p
+        ex: 
+        = activite.questions.first.desc if activite.questions.present?
+      %hr
