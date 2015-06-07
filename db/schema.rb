@@ -11,7 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20150510175649) do
+=======
+ActiveRecord::Schema.define(version: 20150605123157) do
+>>>>>>> 9978a2e78c0018313e41ace6c218095323d75b3d
 
   create_table "activites", force: true do |t|
     t.string   "title"
@@ -83,6 +87,14 @@ ActiveRecord::Schema.define(version: 20150510175649) do
     t.string  "reset_password_key"
     t.boolean "admin"
   end
+
+  create_table "valides", force: true do |t|
+    t.integer "user_id"
+    t.integer "activite_id"
+  end
+
+  add_index "valides", ["activite_id"], name: "index_valides_on_activite_id"
+  add_index "valides", ["user_id"], name: "index_valides_on_user_id"
 
   create_table "visits", id: false, force: true do |t|
     t.binary   "id"
