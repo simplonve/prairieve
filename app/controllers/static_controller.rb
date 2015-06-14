@@ -23,8 +23,7 @@ class StaticController < ApplicationController
   
   def validation
     question = Question.find(valide_params[:question_id])
-    attr_valide = question.valide + current_user.id.to_s
-
+    attr_valide = question.valide + ' ' + current_user.id.to_s
     question.valide = attr_valide
     question.save!
     redirect_to user_path(current_user.id) + "#activite#{question.activite_id}"
