@@ -25,7 +25,6 @@ gem 'haml'
 group :development do
   gem 'sqlite3'
   gem 'webrick'
-  gem 'spring'
   gem 'guard'
   gem 'guard-livereload', require: false
   gem 'rack-livereload'
