@@ -1,5 +1,15 @@
 @import 'foundation_and_overrides';
 
+input[type=submit] {
+  padding:0;
+  margin:0;
+  background:none;
+  border:0 none;
+  cursor:pointer;
+  font-size: 1.1em;
+  color: #f04124
+}
+
 .top-bar{ 
   height: 3rem;
   input {height: 2rem}
@@ -23,4 +33,13 @@ main {
 
 .piste_noire {
   background-color: black
+}
+.panel .reponse{color: #139A43;}
+.down_title{
+  padding-bottom: 1em;
+  border-bottom: 1px solid #999  ;
+}
+.label{
+  color:white !important;
+  margin:0
 }

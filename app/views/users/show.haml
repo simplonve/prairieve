@@ -14,21 +14,20 @@
       %li= link_to "#{activite.title.capitalize}", "#activite#{activite.id}"
 
 - @activites.each do |activite|
-  %a{:name => "activite#{activite.id}"}= activite.chapitre.capitalize
-  %h3= activite.title.capitalize
-  %p= activite.desc
-  - activite.questions.each do |qu|
-    = form_for :question, url: validation_path do |form|
-      .columns.medium-6
-        .row
-          = form.hidden_field :question_id, {value: qu.id}
-          .columns.small-2
-            - if qu.already_valid(current_user)
-              .button.tiny.success ✔
-            - else
-              = submit_tag "✘", class: 'alert button tiny' 
-          .columns.small-10
-            = form.label :question_id, qu.desc
-  .columns
-    %p= link_to "Retour au menu", "#menu"
-  %hr
+  .panel
+    %p.label= "Chapitre : #{activite.chapitre.capitalize}"
+    %h3
+      = "#{activite.id}. "
+      = activite.title.capitalize
+    %p.down_title= "↳ #{activite.desc}"
+    - activite.questions.each do |qu|
+      = form_for :question, url: validation_path do |form|
+        = form.hidden_field :question_id, {value: qu.id}
+        - if qu.already_valid(current_user)
+          %p= qu.desc
+          .reponse ↳ | C'est bon !
+        - else
+          %h4= qu.desc 
+          .question= submit_tag "↳ | Valider |"
+      %hr 
+  %p= link_to "Retour au menu", "#menu"
