@@ -21,13 +21,13 @@
       = activite.title.capitalize
     %p.down_title= "↳ #{activite.desc}"
     - activite.questions.each do |qu|
-      = form_for :question, url: validation_path do |form|
+      = form_for :question, url: validation_path, remote: true do |form|
         = form.hidden_field :question_id, {value: qu.id}
         - if qu.already_valid(current_user)
           %p= qu.desc
           .reponse ↳ | C'est bon !
         - else
           %h4= qu.desc 
-          .question= submit_tag "↳ | Valider |"
+          = submit_tag "↳ | Valider |", class: "question new_question_link"
       %hr 
   %p= link_to "Retour au menu", "#menu"

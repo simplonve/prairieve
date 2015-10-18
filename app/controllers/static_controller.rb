@@ -26,7 +26,9 @@ class StaticController < ApplicationController
     attr_valide = question.valide + ' ' + current_user.id.to_s
     question.valide = attr_valide
     question.save!
-    redirect_to user_path(current_user.id) + "#activite#{question.activite_id}"
+    respond_to do |format|
+      format.js
+    end
   end
   
   private
