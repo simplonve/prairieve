@@ -12,7 +12,7 @@
 %hr
 %h1 Activités disponibles
 - @activites.each do |activite|
-  %h4= activite.title 
+  %h4= link_to activite.title, activite_path(activite.id)  
   %h4.subheader= activite.desc 
   %p
     ex: 
